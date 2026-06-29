@@ -1,4 +1,4 @@
-/* Guardian — shared i18n engine for dashboard, privacy and terms pages.
+/* WhiteTree — shared i18n engine for dashboard, privacy and terms pages.
    16 languages. English is the default and the fallback. */
 const LANGS = [
   ["en","English"],["fr","Français"],["es","Español"],["de","Deutsch"],
@@ -34,8 +34,8 @@ I18N.en = {
   "set3":"Minimum account age","set3d":"Below this, the account is filtered",
   "set4":"Slowmode during a raid","set4d":"Applied automatically, then removed",
   "set5":"Anti-impersonation similarity","set5d":"Resemblance threshold with staff",
-  "pv.eye":"Guardian · Discord protection bot","pv.h":"Privacy Policy","pv.upd":"Last updated: June 2026",
-  "pv.intro":"Guardian (\"the bot\") is an anti-raid moderation bot for Discord. This page explains, simply, what data is processed, why, and what is never kept.",
+  "pv.eye":"WhiteTree · Discord protection bot","pv.h":"Privacy Policy","pv.upd":"Last updated: June 2026",
+  "pv.intro":"WhiteTree (\"the bot\") is an anti-raid moderation bot for Discord. This page explains, simply, what data is processed, why, and what is never kept.",
   "pv.h1":"What the bot processes",
   "pv.l1":"Server configuration: protection thresholds, log channel, staff roles, whitelist.",
   "pv.l2":"Technical identifiers: server, channel, role and user IDs involved in a moderation action.",
@@ -50,9 +50,9 @@ I18N.en = {
   "pv.h5":"Security","pv.sec":"Data is stored locally by the bot's host and protected by that host's access controls. The bot token and credentials are never exposed.",
   "pv.h6":"Contact","pv.ct1":"Data controller: [TO COMPLETE — your name/handle]","pv.ct2":"Contact: [TO COMPLETE — email or Discord]",
   "pv.foot":"This policy may change; the date at the top shows the latest revision.",
-  "tm.eye":"Guardian · Discord protection bot","tm.h":"Terms of Service","tm.upd":"Last updated: June 2026",
-  "tm.intro":"By adding Guardian (\"the bot\") to a Discord server, you accept these terms. If you disagree, do not add the bot or remove it.",
-  "tm.h1":"1. Purpose","tm.b1":"Guardian is an automatic moderation tool (anti-raid, anti-nuke, anti-spam, new-account filtering, verification, anti-impersonation). It is provided \"as is\" to help protect servers.",
+  "tm.eye":"WhiteTree · Discord protection bot","tm.h":"Terms of Service","tm.upd":"Last updated: June 2026",
+  "tm.intro":"By adding WhiteTree (\"the bot\") to a Discord server, you accept these terms. If you disagree, do not add the bot or remove it.",
+  "tm.h1":"1. Purpose","tm.b1":"WhiteTree is an automatic moderation tool (anti-raid, anti-nuke, anti-spam, new-account filtering, verification, anti-impersonation). It is provided \"as is\" to help protect servers.",
   "tm.h2":"2. Acceptable use","tm.b2a":"The bot must be used for the legitimate protection of a server.","tm.b2b":"It must not be used to harass, unfairly target members, or bypass Discord's rules.","tm.b2c":"The server administrator remains responsible for the configuration they apply.",
   "tm.h3":"3. Permissions","tm.b3":"The bot requires certain permissions (manage roles, channels, kick, ban, moderate, view audit log) to work. Removing them may stop some protections from working.",
   "tm.h4":"4. Availability","tm.b4":"The service may be interrupted, changed or stopped at any time, with no guarantee of continuous availability or of preventing 100% of attacks.",
@@ -60,7 +60,7 @@ I18N.en = {
   "tm.h6":"6. Data","tm.b6":"Data processing is described in the privacy policy.",
   "tm.h7":"7. Changes","tm.b7":"These terms may be updated. The date at the top shows the latest revision. Continued use means acceptance of the changes.",
   "tm.ct1":"Publisher: [TO COMPLETE — your name/handle]","tm.ct2":"Contact: [TO COMPLETE — email or Discord]",
-  "tm.foot":"Guardian is not affiliated with Discord Inc."
+  "tm.foot":"WhiteTree is not affiliated with Discord Inc."
 };
 
 I18N.fr = {
@@ -88,8 +88,8 @@ I18N.fr = {
   "set3":"Âge minimum du compte","set3d":"En dessous, le compte est filtré",
   "set4":"Slowmode pendant un raid","set4d":"Appliqué automatiquement, puis retiré",
   "set5":"Similarité anti-usurpation","set5d":"Seuil de ressemblance avec le staff",
-  "pv.eye":"Guardian · Bot de protection Discord","pv.h":"Politique de confidentialité","pv.upd":"Dernière mise à jour : juin 2026",
-  "pv.intro":"Guardian (« le bot ») est un bot de modération anti-raid pour Discord. Cette page explique simplement quelles données sont traitées, pourquoi, et ce qui n'est jamais conservé.",
+  "pv.eye":"WhiteTree · Bot de protection Discord","pv.h":"Politique de confidentialité","pv.upd":"Dernière mise à jour : juin 2026",
+  "pv.intro":"WhiteTree (« le bot ») est un bot de modération anti-raid pour Discord. Cette page explique simplement quelles données sont traitées, pourquoi, et ce qui n'est jamais conservé.",
   "pv.h1":"Ce que le bot traite",
   "pv.l1":"Configuration du serveur : seuils de protection, salon de logs, rôles staff, liste blanche.",
   "pv.l2":"Identifiants techniques : IDs de serveurs, salons, rôles et utilisateurs concernés par une action.",
@@ -104,9 +104,9 @@ I18N.fr = {
   "pv.h5":"Sécurité","pv.sec":"Les données sont stockées localement par l'hébergeur du bot et protégées par ses accès. Le jeton du bot et les accès ne sont jamais exposés.",
   "pv.h6":"Contact","pv.ct1":"Responsable du traitement : [À COMPLÉTER — ton nom/pseudo]","pv.ct2":"Contact : [À COMPLÉTER — email ou Discord]",
   "pv.foot":"Cette politique peut évoluer ; la date en haut indique la dernière révision.",
-  "tm.eye":"Guardian · Bot de protection Discord","tm.h":"Conditions d'utilisation","tm.upd":"Dernière mise à jour : juin 2026",
-  "tm.intro":"En ajoutant Guardian (« le bot ») à un serveur Discord, vous acceptez ces conditions. Si vous n'êtes pas d'accord, n'ajoutez pas le bot ou retirez-le.",
-  "tm.h1":"1. Objet","tm.b1":"Guardian est un outil de modération automatique (anti-raid, anti-nuke, anti-spam, filtrage des comptes neufs, vérification, anti-usurpation). Il est fourni « tel quel » pour aider à protéger les serveurs.",
+  "tm.eye":"WhiteTree · Bot de protection Discord","tm.h":"Conditions d'utilisation","tm.upd":"Dernière mise à jour : juin 2026",
+  "tm.intro":"En ajoutant WhiteTree (« le bot ») à un serveur Discord, vous acceptez ces conditions. Si vous n'êtes pas d'accord, n'ajoutez pas le bot ou retirez-le.",
+  "tm.h1":"1. Objet","tm.b1":"WhiteTree est un outil de modération automatique (anti-raid, anti-nuke, anti-spam, filtrage des comptes neufs, vérification, anti-usurpation). Il est fourni « tel quel » pour aider à protéger les serveurs.",
   "tm.h2":"2. Utilisation acceptable","tm.b2a":"Le bot doit être utilisé pour la protection légitime d'un serveur.","tm.b2b":"Il ne doit pas servir à harceler, cibler injustement des membres ou contourner les règles de Discord.","tm.b2c":"L'administrateur du serveur reste responsable de la configuration qu'il applique.",
   "tm.h3":"3. Permissions","tm.b3":"Le bot requiert certaines permissions (gérer rôles, salons, expulser, bannir, modérer, voir les logs d'audit). Les retirer peut empêcher certaines protections de fonctionner.",
   "tm.h4":"4. Disponibilité","tm.b4":"Le service peut être interrompu, modifié ou arrêté à tout moment, sans garantie de disponibilité continue ni de prévention de 100 % des attaques.",
@@ -114,7 +114,7 @@ I18N.fr = {
   "tm.h6":"6. Données","tm.b6":"Le traitement des données est décrit dans la politique de confidentialité.",
   "tm.h7":"7. Modifications","tm.b7":"Ces conditions peuvent être mises à jour. La date en haut indique la dernière révision. L'usage continu vaut acceptation.",
   "tm.ct1":"Éditeur : [À COMPLÉTER — ton nom/pseudo]","tm.ct2":"Contact : [À COMPLÉTER — email ou Discord]",
-  "tm.foot":"Guardian n'est pas affilié à Discord Inc."
+  "tm.foot":"WhiteTree n'est pas affilié à Discord Inc."
 };
 
 I18N.es = {
@@ -142,8 +142,8 @@ I18N.es = {
   "set3":"Edad mínima de la cuenta","set3d":"Por debajo, la cuenta se filtra",
   "set4":"Modo lento durante un raid","set4d":"Se aplica automáticamente y luego se retira",
   "set5":"Similitud anti-suplantación","set5d":"Umbral de parecido con el staff",
-  "pv.eye":"Guardian · Bot de protección de Discord","pv.h":"Política de privacidad","pv.upd":"Última actualización: junio de 2026",
-  "pv.intro":"Guardian («el bot») es un bot de moderación anti-raid para Discord. Esta página explica de forma sencilla qué datos se tratan, por qué y qué nunca se conserva.",
+  "pv.eye":"WhiteTree · Bot de protección de Discord","pv.h":"Política de privacidad","pv.upd":"Última actualización: junio de 2026",
+  "pv.intro":"WhiteTree («el bot») es un bot de moderación anti-raid para Discord. Esta página explica de forma sencilla qué datos se tratan, por qué y qué nunca se conserva.",
   "pv.h1":"Qué procesa el bot",
   "pv.l1":"Configuración del servidor: umbrales de protección, canal de registros, roles del staff, lista blanca.",
   "pv.l2":"Identificadores técnicos: IDs de servidores, canales, roles y usuarios afectados por una acción.",
@@ -158,9 +158,9 @@ I18N.es = {
   "pv.h5":"Seguridad","pv.sec":"Los datos se almacenan localmente en el alojamiento del bot y están protegidos por sus accesos. El token del bot y las credenciales nunca se exponen.",
   "pv.h6":"Contacto","pv.ct1":"Responsable del tratamiento: [POR COMPLETAR — tu nombre/usuario]","pv.ct2":"Contacto: [POR COMPLETAR — email o Discord]",
   "pv.foot":"Esta política puede cambiar; la fecha de arriba indica la última revisión.",
-  "tm.eye":"Guardian · Bot de protección de Discord","tm.h":"Condiciones de uso","tm.upd":"Última actualización: junio de 2026",
-  "tm.intro":"Al añadir Guardian («el bot») a un servidor de Discord, aceptas estas condiciones. Si no estás de acuerdo, no añadas el bot o retíralo.",
-  "tm.h1":"1. Objeto","tm.b1":"Guardian es una herramienta de moderación automática (anti-raid, anti-nuke, anti-spam, filtrado de cuentas nuevas, verificación, anti-suplantación). Se ofrece «tal cual» para ayudar a proteger servidores.",
+  "tm.eye":"WhiteTree · Bot de protección de Discord","tm.h":"Condiciones de uso","tm.upd":"Última actualización: junio de 2026",
+  "tm.intro":"Al añadir WhiteTree («el bot») a un servidor de Discord, aceptas estas condiciones. Si no estás de acuerdo, no añadas el bot o retíralo.",
+  "tm.h1":"1. Objeto","tm.b1":"WhiteTree es una herramienta de moderación automática (anti-raid, anti-nuke, anti-spam, filtrado de cuentas nuevas, verificación, anti-suplantación). Se ofrece «tal cual» para ayudar a proteger servidores.",
   "tm.h2":"2. Uso aceptable","tm.b2a":"El bot debe usarse para la protección legítima de un servidor.","tm.b2b":"No debe usarse para acosar, atacar injustamente a miembros ni eludir las reglas de Discord.","tm.b2c":"El administrador del servidor sigue siendo responsable de la configuración que aplica.",
   "tm.h3":"3. Permisos","tm.b3":"El bot requiere ciertos permisos (gestionar roles, canales, expulsar, banear, moderar, ver el registro de auditoría). Quitarlos puede impedir que algunas protecciones funcionen.",
   "tm.h4":"4. Disponibilidad","tm.b4":"El servicio puede interrumpirse, cambiarse o detenerse en cualquier momento, sin garantía de disponibilidad continua ni de evitar el 100 % de los ataques.",
@@ -168,7 +168,7 @@ I18N.es = {
   "tm.h6":"6. Datos","tm.b6":"El tratamiento de datos se describe en la política de privacidad.",
   "tm.h7":"7. Cambios","tm.b7":"Estas condiciones pueden actualizarse. La fecha de arriba indica la última revisión. El uso continuado implica aceptación.",
   "tm.ct1":"Editor: [POR COMPLETAR — tu nombre/usuario]","tm.ct2":"Contacto: [POR COMPLETAR — email o Discord]",
-  "tm.foot":"Guardian no está afiliado a Discord Inc."
+  "tm.foot":"WhiteTree no está afiliado a Discord Inc."
 };
 
 I18N.de = {
@@ -196,8 +196,8 @@ I18N.de = {
   "set3":"Mindestalter des Kontos","set3d":"Darunter wird das Konto gefiltert",
   "set4":"Slowmode während eines Raids","set4d":"Automatisch angewendet, dann entfernt",
   "set5":"Anti-Imitation-Ähnlichkeit","set5d":"Ähnlichkeitsschwelle zum Team",
-  "pv.eye":"Guardian · Discord-Schutzbot","pv.h":"Datenschutzerklärung","pv.upd":"Zuletzt aktualisiert: Juni 2026",
-  "pv.intro":"Guardian („der Bot\") ist ein Anti-Raid-Moderationsbot für Discord. Diese Seite erklärt einfach, welche Daten verarbeitet werden, warum, und was nie gespeichert wird.",
+  "pv.eye":"WhiteTree · Discord-Schutzbot","pv.h":"Datenschutzerklärung","pv.upd":"Zuletzt aktualisiert: Juni 2026",
+  "pv.intro":"WhiteTree („der Bot\") ist ein Anti-Raid-Moderationsbot für Discord. Diese Seite erklärt einfach, welche Daten verarbeitet werden, warum, und was nie gespeichert wird.",
   "pv.h1":"Was der Bot verarbeitet",
   "pv.l1":"Serverkonfiguration: Schutzschwellen, Log-Kanal, Team-Rollen, Whitelist.",
   "pv.l2":"Technische Kennungen: Server-, Kanal-, Rollen- und Benutzer-IDs einer Moderationsaktion.",
@@ -212,9 +212,9 @@ I18N.de = {
   "pv.h5":"Sicherheit","pv.sec":"Die Daten werden lokal beim Hoster des Bots gespeichert und durch dessen Zugänge geschützt. Bot-Token und Zugangsdaten werden nie offengelegt.",
   "pv.h6":"Kontakt","pv.ct1":"Verantwortlicher: [AUSZUFÜLLEN — dein Name/Handle]","pv.ct2":"Kontakt: [AUSZUFÜLLEN — E-Mail oder Discord]",
   "pv.foot":"Diese Erklärung kann sich ändern; das Datum oben zeigt die letzte Überarbeitung.",
-  "tm.eye":"Guardian · Discord-Schutzbot","tm.h":"Nutzungsbedingungen","tm.upd":"Zuletzt aktualisiert: Juni 2026",
-  "tm.intro":"Mit dem Hinzufügen von Guardian („der Bot\") zu einem Discord-Server akzeptierst du diese Bedingungen. Bist du nicht einverstanden, füge den Bot nicht hinzu oder entferne ihn.",
-  "tm.h1":"1. Zweck","tm.b1":"Guardian ist ein automatisches Moderationswerkzeug (Anti-Raid, Anti-Nuke, Anti-Spam, Filter neuer Konten, Verifizierung, Anti-Imitation). Es wird „wie besehen\" zum Schutz von Servern bereitgestellt.",
+  "tm.eye":"WhiteTree · Discord-Schutzbot","tm.h":"Nutzungsbedingungen","tm.upd":"Zuletzt aktualisiert: Juni 2026",
+  "tm.intro":"Mit dem Hinzufügen von WhiteTree („der Bot\") zu einem Discord-Server akzeptierst du diese Bedingungen. Bist du nicht einverstanden, füge den Bot nicht hinzu oder entferne ihn.",
+  "tm.h1":"1. Zweck","tm.b1":"WhiteTree ist ein automatisches Moderationswerkzeug (Anti-Raid, Anti-Nuke, Anti-Spam, Filter neuer Konten, Verifizierung, Anti-Imitation). Es wird „wie besehen\" zum Schutz von Servern bereitgestellt.",
   "tm.h2":"2. Zulässige Nutzung","tm.b2a":"Der Bot ist für den legitimen Schutz eines Servers zu nutzen.","tm.b2b":"Er darf nicht zum Belästigen, unfairen Anvisieren von Mitgliedern oder Umgehen der Discord-Regeln dienen.","tm.b2c":"Der Server-Administrator bleibt für die angewandte Konfiguration verantwortlich.",
   "tm.h3":"3. Berechtigungen","tm.b3":"Der Bot benötigt bestimmte Rechte (Rollen, Kanäle verwalten, kicken, bannen, moderieren, Audit-Log sehen). Ihr Entzug kann Schutzfunktionen deaktivieren.",
   "tm.h4":"4. Verfügbarkeit","tm.b4":"Der Dienst kann jederzeit unterbrochen, geändert oder eingestellt werden, ohne Garantie für Verfügbarkeit oder die Abwehr von 100 % der Angriffe.",
@@ -222,7 +222,7 @@ I18N.de = {
   "tm.h6":"6. Daten","tm.b6":"Die Datenverarbeitung wird in der Datenschutzerklärung beschrieben.",
   "tm.h7":"7. Änderungen","tm.b7":"Diese Bedingungen können aktualisiert werden. Das Datum oben zeigt die letzte Überarbeitung. Weitere Nutzung gilt als Zustimmung.",
   "tm.ct1":"Herausgeber: [AUSZUFÜLLEN — dein Name/Handle]","tm.ct2":"Kontakt: [AUSZUFÜLLEN — E-Mail oder Discord]",
-  "tm.foot":"Guardian ist nicht mit Discord Inc. verbunden."
+  "tm.foot":"WhiteTree ist nicht mit Discord Inc. verbunden."
 };
 
 I18N.pt = {
@@ -250,8 +250,8 @@ I18N.pt = {
   "set3":"Idade mínima da conta","set3d":"Abaixo disto, a conta é filtrada",
   "set4":"Modo lento durante um raid","set4d":"Aplicado automaticamente e depois removido",
   "set5":"Semelhança anti-falsificação","set5d":"Limite de semelhança com o staff",
-  "pv.eye":"Guardian · Bot de proteção do Discord","pv.h":"Política de privacidade","pv.upd":"Última atualização: junho de 2026",
-  "pv.intro":"O Guardian («o bot») é um bot de moderação anti-raid para Discord. Esta página explica de forma simples que dados são tratados, porquê, e o que nunca é guardado.",
+  "pv.eye":"WhiteTree · Bot de proteção do Discord","pv.h":"Política de privacidade","pv.upd":"Última atualização: junho de 2026",
+  "pv.intro":"O WhiteTree («o bot») é um bot de moderação anti-raid para Discord. Esta página explica de forma simples que dados são tratados, porquê, e o que nunca é guardado.",
   "pv.h1":"O que o bot processa",
   "pv.l1":"Configuração do servidor: limites de proteção, canal de registos, cargos do staff, lista branca.",
   "pv.l2":"Identificadores técnicos: IDs de servidores, canais, cargos e utilizadores envolvidos numa ação.",
@@ -266,9 +266,9 @@ I18N.pt = {
   "pv.h5":"Segurança","pv.sec":"Os dados são guardados localmente pelo alojamento do bot e protegidos pelos seus acessos. O token e as credenciais nunca são expostos.",
   "pv.h6":"Contacto","pv.ct1":"Responsável pelo tratamento: [A PREENCHER — o teu nome/utilizador]","pv.ct2":"Contacto: [A PREENCHER — email ou Discord]",
   "pv.foot":"Esta política pode mudar; a data no topo indica a última revisão.",
-  "tm.eye":"Guardian · Bot de proteção do Discord","tm.h":"Termos de utilização","tm.upd":"Última atualização: junho de 2026",
-  "tm.intro":"Ao adicionar o Guardian («o bot») a um servidor Discord, aceitas estes termos. Se não concordas, não adiciones o bot ou remove-o.",
-  "tm.h1":"1. Objeto","tm.b1":"O Guardian é uma ferramenta de moderação automática (anti-raid, anti-nuke, anti-spam, filtragem de contas novas, verificação, anti-falsificação). É fornecido «tal como está» para ajudar a proteger servidores.",
+  "tm.eye":"WhiteTree · Bot de proteção do Discord","tm.h":"Termos de utilização","tm.upd":"Última atualização: junho de 2026",
+  "tm.intro":"Ao adicionar o WhiteTree («o bot») a um servidor Discord, aceitas estes termos. Se não concordas, não adiciones o bot ou remove-o.",
+  "tm.h1":"1. Objeto","tm.b1":"O WhiteTree é uma ferramenta de moderação automática (anti-raid, anti-nuke, anti-spam, filtragem de contas novas, verificação, anti-falsificação). É fornecido «tal como está» para ajudar a proteger servidores.",
   "tm.h2":"2. Utilização aceitável","tm.b2a":"O bot deve ser usado para a proteção legítima de um servidor.","tm.b2b":"Não deve servir para assediar, visar injustamente membros ou contornar as regras do Discord.","tm.b2c":"O administrador do servidor continua responsável pela configuração que aplica.",
   "tm.h3":"3. Permissões","tm.b3":"O bot requer certas permissões (gerir cargos, canais, expulsar, banir, moderar, ver o registo de auditoria). Removê-las pode impedir algumas proteções de funcionar.",
   "tm.h4":"4. Disponibilidade","tm.b4":"O serviço pode ser interrompido, alterado ou parado a qualquer momento, sem garantia de disponibilidade contínua nem de evitar 100 % dos ataques.",
@@ -276,7 +276,7 @@ I18N.pt = {
   "tm.h6":"6. Dados","tm.b6":"O tratamento de dados é descrito na política de privacidade.",
   "tm.h7":"7. Alterações","tm.b7":"Estes termos podem ser atualizados. A data no topo indica a última revisão. O uso continuado significa aceitação.",
   "tm.ct1":"Editor: [A PREENCHER — o teu nome/utilizador]","tm.ct2":"Contacto: [A PREENCHER — email ou Discord]",
-  "tm.foot":"O Guardian não está associado à Discord Inc."
+  "tm.foot":"O WhiteTree não está associado à Discord Inc."
 };
 
 I18N.it = {
@@ -304,8 +304,8 @@ I18N.it = {
   "set3":"Età minima dell'account","set3d":"Al di sotto, l'account viene filtrato",
   "set4":"Slowmode durante un raid","set4d":"Applicato automaticamente, poi rimosso",
   "set5":"Somiglianza anti-impersonazione","set5d":"Soglia di somiglianza con lo staff",
-  "pv.eye":"Guardian · Bot di protezione Discord","pv.h":"Informativa sulla privacy","pv.upd":"Ultimo aggiornamento: giugno 2026",
-  "pv.intro":"Guardian («il bot») è un bot di moderazione anti-raid per Discord. Questa pagina spiega in modo semplice quali dati vengono trattati, perché e cosa non viene mai conservato.",
+  "pv.eye":"WhiteTree · Bot di protezione Discord","pv.h":"Informativa sulla privacy","pv.upd":"Ultimo aggiornamento: giugno 2026",
+  "pv.intro":"WhiteTree («il bot») è un bot di moderazione anti-raid per Discord. Questa pagina spiega in modo semplice quali dati vengono trattati, perché e cosa non viene mai conservato.",
   "pv.h1":"Cosa elabora il bot",
   "pv.l1":"Configurazione del server: soglie di protezione, canale dei log, ruoli staff, whitelist.",
   "pv.l2":"Identificatori tecnici: ID di server, canali, ruoli e utenti coinvolti in un'azione.",
@@ -320,9 +320,9 @@ I18N.it = {
   "pv.h5":"Sicurezza","pv.sec":"I dati sono archiviati localmente dall'host del bot e protetti dai suoi accessi. Il token e le credenziali non vengono mai esposti.",
   "pv.h6":"Contatto","pv.ct1":"Titolare del trattamento: [DA COMPLETARE — il tuo nome/handle]","pv.ct2":"Contatto: [DA COMPLETARE — email o Discord]",
   "pv.foot":"Questa informativa può cambiare; la data in alto indica l'ultima revisione.",
-  "tm.eye":"Guardian · Bot di protezione Discord","tm.h":"Termini di servizio","tm.upd":"Ultimo aggiornamento: giugno 2026",
-  "tm.intro":"Aggiungendo Guardian («il bot») a un server Discord, accetti questi termini. Se non sei d'accordo, non aggiungere il bot o rimuovilo.",
-  "tm.h1":"1. Oggetto","tm.b1":"Guardian è uno strumento di moderazione automatica (anti-raid, anti-nuke, anti-spam, filtro dei nuovi account, verifica, anti-impersonazione). È fornito «così com'è» per aiutare a proteggere i server.",
+  "tm.eye":"WhiteTree · Bot di protezione Discord","tm.h":"Termini di servizio","tm.upd":"Ultimo aggiornamento: giugno 2026",
+  "tm.intro":"Aggiungendo WhiteTree («il bot») a un server Discord, accetti questi termini. Se non sei d'accordo, non aggiungere il bot o rimuovilo.",
+  "tm.h1":"1. Oggetto","tm.b1":"WhiteTree è uno strumento di moderazione automatica (anti-raid, anti-nuke, anti-spam, filtro dei nuovi account, verifica, anti-impersonazione). È fornito «così com'è» per aiutare a proteggere i server.",
   "tm.h2":"2. Uso accettabile","tm.b2a":"Il bot deve essere usato per la protezione legittima di un server.","tm.b2b":"Non deve servire a molestare, prendere di mira ingiustamente i membri o aggirare le regole di Discord.","tm.b2c":"L'amministratore del server resta responsabile della configurazione che applica.",
   "tm.h3":"3. Permessi","tm.b3":"Il bot richiede alcuni permessi (gestire ruoli, canali, espellere, bannare, moderare, vedere il registro audit). Rimuoverli può impedire ad alcune protezioni di funzionare.",
   "tm.h4":"4. Disponibilità","tm.b4":"Il servizio può essere interrotto, modificato o fermato in qualsiasi momento, senza garanzia di disponibilità continua né di prevenire il 100% degli attacchi.",
@@ -330,7 +330,7 @@ I18N.it = {
   "tm.h6":"6. Dati","tm.b6":"Il trattamento dei dati è descritto nell'informativa sulla privacy.",
   "tm.h7":"7. Modifiche","tm.b7":"Questi termini possono essere aggiornati. La data in alto indica l'ultima revisione. L'uso continuato implica accettazione.",
   "tm.ct1":"Editore: [DA COMPLETARE — il tuo nome/handle]","tm.ct2":"Contatto: [DA COMPLETARE — email o Discord]",
-  "tm.foot":"Guardian non è affiliato a Discord Inc."
+  "tm.foot":"WhiteTree non è affiliato a Discord Inc."
 };
 
 I18N.nl = {
@@ -358,8 +358,8 @@ I18N.nl = {
   "set3":"Minimale accountleeftijd","set3d":"Daaronder wordt het account gefilterd",
   "set4":"Slowmode tijdens een raid","set4d":"Automatisch toegepast, daarna verwijderd",
   "set5":"Anti-imitatie-gelijkenis","set5d":"Gelijkenisdrempel met de staf",
-  "pv.eye":"Guardian · Discord-beschermingsbot","pv.h":"Privacybeleid","pv.upd":"Laatst bijgewerkt: juni 2026",
-  "pv.intro":"Guardian (\"de bot\") is een anti-raid moderatiebot voor Discord. Deze pagina legt eenvoudig uit welke gegevens worden verwerkt, waarom, en wat nooit wordt bewaard.",
+  "pv.eye":"WhiteTree · Discord-beschermingsbot","pv.h":"Privacybeleid","pv.upd":"Laatst bijgewerkt: juni 2026",
+  "pv.intro":"WhiteTree (\"de bot\") is een anti-raid moderatiebot voor Discord. Deze pagina legt eenvoudig uit welke gegevens worden verwerkt, waarom, en wat nooit wordt bewaard.",
   "pv.h1":"Wat de bot verwerkt",
   "pv.l1":"Serverconfiguratie: beveiligingsdrempels, logkanaal, stafrollen, witte lijst.",
   "pv.l2":"Technische identificatoren: server-, kanaal-, rol- en gebruikers-ID's bij een actie.",
@@ -374,9 +374,9 @@ I18N.nl = {
   "pv.h5":"Beveiliging","pv.sec":"Gegevens worden lokaal opgeslagen door de host van de bot en beschermd door diens toegang. Het token en de inloggegevens worden nooit blootgesteld.",
   "pv.h6":"Contact","pv.ct1":"Verwerkingsverantwoordelijke: [IN TE VULLEN — je naam/handle]","pv.ct2":"Contact: [IN TE VULLEN — e-mail of Discord]",
   "pv.foot":"Dit beleid kan wijzigen; de datum bovenaan toont de laatste herziening.",
-  "tm.eye":"Guardian · Discord-beschermingsbot","tm.h":"Gebruiksvoorwaarden","tm.upd":"Laatst bijgewerkt: juni 2026",
-  "tm.intro":"Door Guardian (\"de bot\") aan een Discord-server toe te voegen, accepteer je deze voorwaarden. Ben je het er niet mee eens, voeg de bot dan niet toe of verwijder hem.",
-  "tm.h1":"1. Doel","tm.b1":"Guardian is een automatisch moderatiehulpmiddel (anti-raid, anti-nuke, anti-spam, filtering van nieuwe accounts, verificatie, anti-imitatie). Het wordt \"as is\" geleverd om servers te helpen beschermen.",
+  "tm.eye":"WhiteTree · Discord-beschermingsbot","tm.h":"Gebruiksvoorwaarden","tm.upd":"Laatst bijgewerkt: juni 2026",
+  "tm.intro":"Door WhiteTree (\"de bot\") aan een Discord-server toe te voegen, accepteer je deze voorwaarden. Ben je het er niet mee eens, voeg de bot dan niet toe of verwijder hem.",
+  "tm.h1":"1. Doel","tm.b1":"WhiteTree is een automatisch moderatiehulpmiddel (anti-raid, anti-nuke, anti-spam, filtering van nieuwe accounts, verificatie, anti-imitatie). Het wordt \"as is\" geleverd om servers te helpen beschermen.",
   "tm.h2":"2. Aanvaardbaar gebruik","tm.b2a":"De bot moet worden gebruikt voor de legitieme bescherming van een server.","tm.b2b":"Hij mag niet worden gebruikt om te pesten, leden oneerlijk te viseren of de regels van Discord te omzeilen.","tm.b2c":"De serverbeheerder blijft verantwoordelijk voor de toegepaste configuratie.",
   "tm.h3":"3. Rechten","tm.b3":"De bot vereist bepaalde rechten (rollen, kanalen beheren, kicken, bannen, modereren, auditlogboek bekijken). Ze verwijderen kan sommige beveiligingen uitschakelen.",
   "tm.h4":"4. Beschikbaarheid","tm.b4":"De dienst kan op elk moment worden onderbroken, gewijzigd of gestopt, zonder garantie op continue beschikbaarheid of het voorkomen van 100% van de aanvallen.",
@@ -384,7 +384,7 @@ I18N.nl = {
   "tm.h6":"6. Gegevens","tm.b6":"De gegevensverwerking wordt beschreven in het privacybeleid.",
   "tm.h7":"7. Wijzigingen","tm.b7":"Deze voorwaarden kunnen worden bijgewerkt. De datum bovenaan toont de laatste herziening. Voortgezet gebruik betekent aanvaarding.",
   "tm.ct1":"Uitgever: [IN TE VULLEN — je naam/handle]","tm.ct2":"Contact: [IN TE VULLEN — e-mail of Discord]",
-  "tm.foot":"Guardian is niet verbonden aan Discord Inc."
+  "tm.foot":"WhiteTree is niet verbonden aan Discord Inc."
 };
 
 I18N.pl = {
@@ -412,8 +412,8 @@ I18N.pl = {
   "set3":"Minimalny wiek konta","set3d":"Poniżej konto jest filtrowane",
   "set4":"Tryb wolny podczas rajdu","set4d":"Stosowany automatycznie, potem usuwany",
   "set5":"Podobieństwo anti-podszywanie","set5d":"Próg podobieństwa do ekipy",
-  "pv.eye":"Guardian · Bot ochrony Discord","pv.h":"Polityka prywatności","pv.upd":"Ostatnia aktualizacja: czerwiec 2026",
-  "pv.intro":"Guardian („bot\") to bot moderacyjny anti-raid dla Discorda. Ta strona prosto wyjaśnia, jakie dane są przetwarzane, dlaczego i co nigdy nie jest przechowywane.",
+  "pv.eye":"WhiteTree · Bot ochrony Discord","pv.h":"Polityka prywatności","pv.upd":"Ostatnia aktualizacja: czerwiec 2026",
+  "pv.intro":"WhiteTree („bot\") to bot moderacyjny anti-raid dla Discorda. Ta strona prosto wyjaśnia, jakie dane są przetwarzane, dlaczego i co nigdy nie jest przechowywane.",
   "pv.h1":"Co bot przetwarza",
   "pv.l1":"Konfiguracja serwera: progi ochrony, kanał logów, role ekipy, biała lista.",
   "pv.l2":"Identyfikatory techniczne: ID serwerów, kanałów, ról i użytkowników objętych akcją.",
@@ -428,9 +428,9 @@ I18N.pl = {
   "pv.h5":"Bezpieczeństwo","pv.sec":"Dane są przechowywane lokalnie przez hosta bota i chronione jego dostępem. Token i poświadczenia nigdy nie są ujawniane.",
   "pv.h6":"Kontakt","pv.ct1":"Administrator danych: [DO UZUPEŁNIENIA — twoje imię/nick]","pv.ct2":"Kontakt: [DO UZUPEŁNIENIA — e-mail lub Discord]",
   "pv.foot":"Ta polityka może się zmienić; data u góry wskazuje ostatnią zmianę.",
-  "tm.eye":"Guardian · Bot ochrony Discord","tm.h":"Warunki korzystania","tm.upd":"Ostatnia aktualizacja: czerwiec 2026",
-  "tm.intro":"Dodając Guardiana („bota\") do serwera Discord, akceptujesz te warunki. Jeśli się nie zgadzasz, nie dodawaj bota lub go usuń.",
-  "tm.h1":"1. Cel","tm.b1":"Guardian to narzędzie automatycznej moderacji (anti-raid, anti-nuke, anti-spam, filtrowanie nowych kont, weryfikacja, anti-podszywanie). Jest dostarczany „tak jak jest\", aby pomóc chronić serwery.",
+  "tm.eye":"WhiteTree · Bot ochrony Discord","tm.h":"Warunki korzystania","tm.upd":"Ostatnia aktualizacja: czerwiec 2026",
+  "tm.intro":"Dodając WhiteTreea („bota\") do serwera Discord, akceptujesz te warunki. Jeśli się nie zgadzasz, nie dodawaj bota lub go usuń.",
+  "tm.h1":"1. Cel","tm.b1":"WhiteTree to narzędzie automatycznej moderacji (anti-raid, anti-nuke, anti-spam, filtrowanie nowych kont, weryfikacja, anti-podszywanie). Jest dostarczany „tak jak jest\", aby pomóc chronić serwery.",
   "tm.h2":"2. Dopuszczalne użycie","tm.b2a":"Bot musi być używany do legalnej ochrony serwera.","tm.b2b":"Nie wolno go używać do nękania, niesprawiedliwego atakowania członków ani obchodzenia zasad Discorda.","tm.b2c":"Administrator serwera odpowiada za stosowaną konfigurację.",
   "tm.h3":"3. Uprawnienia","tm.b3":"Bot wymaga pewnych uprawnień (zarządzanie rolami, kanałami, wyrzucanie, banowanie, moderowanie, podgląd dziennika audytu). Ich usunięcie może wyłączyć niektóre ochrony.",
   "tm.h4":"4. Dostępność","tm.b4":"Usługa może być przerwana, zmieniona lub zatrzymana w dowolnym momencie, bez gwarancji ciągłej dostępności ani powstrzymania 100% ataków.",
@@ -438,7 +438,7 @@ I18N.pl = {
   "tm.h6":"6. Dane","tm.b6":"Przetwarzanie danych opisano w polityce prywatności.",
   "tm.h7":"7. Zmiany","tm.b7":"Warunki mogą być aktualizowane. Data u góry wskazuje ostatnią zmianę. Dalsze korzystanie oznacza akceptację.",
   "tm.ct1":"Wydawca: [DO UZUPEŁNIENIA — twoje imię/nick]","tm.ct2":"Kontakt: [DO UZUPEŁNIENIA — e-mail lub Discord]",
-  "tm.foot":"Guardian nie jest powiązany z Discord Inc."
+  "tm.foot":"WhiteTree nie jest powiązany z Discord Inc."
 };
 
 I18N.ru = {
@@ -466,8 +466,8 @@ I18N.ru = {
   "set3":"Минимальный возраст аккаунта","set3d":"Ниже него аккаунт отсеивается",
   "set4":"Медленный режим во время рейда","set4d":"Применяется автоматически, затем снимается",
   "set5":"Сходство анти-подмены","set5d":"Порог сходства с персоналом",
-  "pv.eye":"Guardian · Бот защиты Discord","pv.h":"Политика конфиденциальности","pv.upd":"Последнее обновление: июнь 2026",
-  "pv.intro":"Guardian («бот») — это бот модерации анти-рейд для Discord. Эта страница просто объясняет, какие данные обрабатываются, зачем и что никогда не хранится.",
+  "pv.eye":"WhiteTree · Бот защиты Discord","pv.h":"Политика конфиденциальности","pv.upd":"Последнее обновление: июнь 2026",
+  "pv.intro":"WhiteTree («бот») — это бот модерации анти-рейд для Discord. Эта страница просто объясняет, какие данные обрабатываются, зачем и что никогда не хранится.",
   "pv.h1":"Что обрабатывает бот",
   "pv.l1":"Конфигурация сервера: пороги защиты, канал логов, роли персонала, белый список.",
   "pv.l2":"Технические идентификаторы: ID серверов, каналов, ролей и пользователей в действии.",
@@ -482,9 +482,9 @@ I18N.ru = {
   "pv.h5":"Безопасность","pv.sec":"Данные хранятся локально у хостинга бота и защищены его доступом. Токен и учётные данные никогда не раскрываются.",
   "pv.h6":"Контакт","pv.ct1":"Оператор данных: [ЗАПОЛНИТЬ — ваше имя/ник]","pv.ct2":"Контакт: [ЗАПОЛНИТЬ — email или Discord]",
   "pv.foot":"Эта политика может меняться; дата вверху указывает последнюю редакцию.",
-  "tm.eye":"Guardian · Бот защиты Discord","tm.h":"Условия использования","tm.upd":"Последнее обновление: июнь 2026",
-  "tm.intro":"Добавляя Guardian («бота») на сервер Discord, вы принимаете эти условия. Если вы не согласны, не добавляйте бота или удалите его.",
-  "tm.h1":"1. Назначение","tm.b1":"Guardian — инструмент автоматической модерации (анти-рейд, анти-нюк, анти-спам, фильтр новых аккаунтов, верификация, анти-подмена). Предоставляется «как есть» для защиты серверов.",
+  "tm.eye":"WhiteTree · Бот защиты Discord","tm.h":"Условия использования","tm.upd":"Последнее обновление: июнь 2026",
+  "tm.intro":"Добавляя WhiteTree («бота») на сервер Discord, вы принимаете эти условия. Если вы не согласны, не добавляйте бота или удалите его.",
+  "tm.h1":"1. Назначение","tm.b1":"WhiteTree — инструмент автоматической модерации (анти-рейд, анти-нюк, анти-спам, фильтр новых аккаунтов, верификация, анти-подмена). Предоставляется «как есть» для защиты серверов.",
   "tm.h2":"2. Допустимое использование","tm.b2a":"Бот должен использоваться для законной защиты сервера.","tm.b2b":"Его нельзя использовать для травли, несправедливого преследования участников или обхода правил Discord.","tm.b2c":"Администратор сервера отвечает за применяемую конфигурацию.",
   "tm.h3":"3. Права","tm.b3":"Боту нужны определённые права (управление ролями, каналами, кик, бан, модерация, просмотр журнала аудита). Их снятие может отключить часть защиты.",
   "tm.h4":"4. Доступность","tm.b4":"Сервис может быть прерван, изменён или остановлен в любой момент, без гарантии непрерывной работы или предотвращения 100% атак.",
@@ -492,7 +492,7 @@ I18N.ru = {
   "tm.h6":"6. Данные","tm.b6":"Обработка данных описана в политике конфиденциальности.",
   "tm.h7":"7. Изменения","tm.b7":"Условия могут обновляться. Дата вверху указывает последнюю редакцию. Продолжение использования означает согласие.",
   "tm.ct1":"Издатель: [ЗАПОЛНИТЬ — ваше имя/ник]","tm.ct2":"Контакт: [ЗАПОЛНИТЬ — email или Discord]",
-  "tm.foot":"Guardian не связан с Discord Inc."
+  "tm.foot":"WhiteTree не связан с Discord Inc."
 };
 
 I18N.uk = {
@@ -520,8 +520,8 @@ I18N.uk = {
   "set3":"Мінімальний вік акаунта","set3d":"Нижче нього акаунт відсіюється",
   "set4":"Повільний режим під час рейду","set4d":"Застосовується автоматично, потім знімається",
   "set5":"Схожість анти-підміни","set5d":"Поріг схожості з персоналом",
-  "pv.eye":"Guardian · Бот захисту Discord","pv.h":"Політика конфіденційності","pv.upd":"Останнє оновлення: червень 2026",
-  "pv.intro":"Guardian («бот») — це бот модерації анти-рейд для Discord. Ця сторінка просто пояснює, які дані обробляються, навіщо й що ніколи не зберігається.",
+  "pv.eye":"WhiteTree · Бот захисту Discord","pv.h":"Політика конфіденційності","pv.upd":"Останнє оновлення: червень 2026",
+  "pv.intro":"WhiteTree («бот») — це бот модерації анти-рейд для Discord. Ця сторінка просто пояснює, які дані обробляються, навіщо й що ніколи не зберігається.",
   "pv.h1":"Що обробляє бот",
   "pv.l1":"Конфігурація сервера: пороги захисту, канал логів, ролі персоналу, білий список.",
   "pv.l2":"Технічні ідентифікатори: ID серверів, каналів, ролей і користувачів у дії.",
@@ -536,9 +536,9 @@ I18N.uk = {
   "pv.h5":"Безпека","pv.sec":"Дані зберігаються локально на хостингу бота й захищені його доступом. Токен і облікові дані ніколи не розкриваються.",
   "pv.h6":"Контакт","pv.ct1":"Розпорядник даних: [ЗАПОВНИТИ — ваше імʼя/нік]","pv.ct2":"Контакт: [ЗАПОВНИТИ — email або Discord]",
   "pv.foot":"Ця політика може змінюватися; дата вгорі вказує останню редакцію.",
-  "tm.eye":"Guardian · Бот захисту Discord","tm.h":"Умови використання","tm.upd":"Останнє оновлення: червень 2026",
-  "tm.intro":"Додаючи Guardian («бота») на сервер Discord, ви приймаєте ці умови. Якщо ви не згодні, не додавайте бота або видаліть його.",
-  "tm.h1":"1. Призначення","tm.b1":"Guardian — інструмент автоматичної модерації (анти-рейд, анти-нюк, анти-спам, фільтр нових акаунтів, верифікація, анти-підміна). Надається «як є» для захисту серверів.",
+  "tm.eye":"WhiteTree · Бот захисту Discord","tm.h":"Умови використання","tm.upd":"Останнє оновлення: червень 2026",
+  "tm.intro":"Додаючи WhiteTree («бота») на сервер Discord, ви приймаєте ці умови. Якщо ви не згодні, не додавайте бота або видаліть його.",
+  "tm.h1":"1. Призначення","tm.b1":"WhiteTree — інструмент автоматичної модерації (анти-рейд, анти-нюк, анти-спам, фільтр нових акаунтів, верифікація, анти-підміна). Надається «як є» для захисту серверів.",
   "tm.h2":"2. Допустиме використання","tm.b2a":"Бот має використовуватися для законного захисту сервера.","tm.b2b":"Його не можна використовувати для цькування, несправедливого переслідування учасників чи обходу правил Discord.","tm.b2c":"Адміністратор сервера відповідає за застосовану конфігурацію.",
   "tm.h3":"3. Права","tm.b3":"Боту потрібні певні права (керування ролями, каналами, кік, бан, модерація, перегляд журналу аудиту). Їх зняття може вимкнути частину захисту.",
   "tm.h4":"4. Доступність","tm.b4":"Сервіс може бути перерваний, змінений або зупинений будь-коли, без гарантії безперервної роботи чи запобігання 100% атак.",
@@ -546,7 +546,7 @@ I18N.uk = {
   "tm.h6":"6. Дані","tm.b6":"Обробку даних описано в політиці конфіденційності.",
   "tm.h7":"7. Зміни","tm.b7":"Умови можуть оновлюватися. Дата вгорі вказує останню редакцію. Подальше використання означає згоду.",
   "tm.ct1":"Видавець: [ЗАПОВНИТИ — ваше імʼя/нік]","tm.ct2":"Контакт: [ЗАПОВНИТИ — email або Discord]",
-  "tm.foot":"Guardian не повʼязаний із Discord Inc."
+  "tm.foot":"WhiteTree не повʼязаний із Discord Inc."
 };
 
 I18N.tr = {
@@ -574,8 +574,8 @@ I18N.tr = {
   "set3":"Asgari hesap yaşı","set3d":"Altında hesap süzülür",
   "set4":"Baskın sırasında yavaş mod","set4d":"Otomatik uygulanır, sonra kaldırılır",
   "set5":"Taklit önleme benzerliği","set5d":"Ekiple benzerlik eşiği",
-  "pv.eye":"Guardian · Discord koruma botu","pv.h":"Gizlilik Politikası","pv.upd":"Son güncelleme: Haziran 2026",
-  "pv.intro":"Guardian (\"bot\"), Discord için bir baskın önleme moderasyon botudur. Bu sayfa, hangi verilerin neden işlendiğini ve neyin asla saklanmadığını basitçe açıklar.",
+  "pv.eye":"WhiteTree · Discord koruma botu","pv.h":"Gizlilik Politikası","pv.upd":"Son güncelleme: Haziran 2026",
+  "pv.intro":"WhiteTree (\"bot\"), Discord için bir baskın önleme moderasyon botudur. Bu sayfa, hangi verilerin neden işlendiğini ve neyin asla saklanmadığını basitçe açıklar.",
   "pv.h1":"Botun işlediği veriler",
   "pv.l1":"Sunucu yapılandırması: koruma eşikleri, günlük kanalı, ekip rolleri, beyaz liste.",
   "pv.l2":"Teknik tanımlayıcılar: bir işlemdeki sunucu, kanal, rol ve kullanıcı kimlikleri.",
@@ -590,9 +590,9 @@ I18N.tr = {
   "pv.h5":"Güvenlik","pv.sec":"Veriler botun barındırıcısında yerel olarak saklanır ve onun erişimiyle korunur. Token ve kimlik bilgileri asla açığa çıkmaz.",
   "pv.h6":"İletişim","pv.ct1":"Veri sorumlusu: [DOLDURULACAK — adın/kullanıcı adın]","pv.ct2":"İletişim: [DOLDURULACAK — e-posta veya Discord]",
   "pv.foot":"Bu politika değişebilir; üstteki tarih son revizyonu gösterir.",
-  "tm.eye":"Guardian · Discord koruma botu","tm.h":"Kullanım Koşulları","tm.upd":"Son güncelleme: Haziran 2026",
-  "tm.intro":"Guardian'ı (\"bot\") bir Discord sunucusuna ekleyerek bu koşulları kabul edersin. Katılmıyorsan botu ekleme veya kaldır.",
-  "tm.h1":"1. Amaç","tm.b1":"Guardian otomatik bir moderasyon aracıdır (baskın, nuke, spam önleme, yeni hesap süzme, doğrulama, taklit önleme). Sunucuları korumaya yardımcı olmak için \"olduğu gibi\" sunulur.",
+  "tm.eye":"WhiteTree · Discord koruma botu","tm.h":"Kullanım Koşulları","tm.upd":"Son güncelleme: Haziran 2026",
+  "tm.intro":"WhiteTree'ı (\"bot\") bir Discord sunucusuna ekleyerek bu koşulları kabul edersin. Katılmıyorsan botu ekleme veya kaldır.",
+  "tm.h1":"1. Amaç","tm.b1":"WhiteTree otomatik bir moderasyon aracıdır (baskın, nuke, spam önleme, yeni hesap süzme, doğrulama, taklit önleme). Sunucuları korumaya yardımcı olmak için \"olduğu gibi\" sunulur.",
   "tm.h2":"2. Kabul edilebilir kullanım","tm.b2a":"Bot bir sunucunun meşru korunması için kullanılmalıdır.","tm.b2b":"Taciz, üyeleri haksız hedef alma veya Discord kurallarını atlatma için kullanılamaz.","tm.b2c":"Sunucu yöneticisi uyguladığı yapılandırmadan sorumludur.",
   "tm.h3":"3. İzinler","tm.b3":"Bot bazı izinler gerektirir (rol, kanal yönetimi, atma, yasaklama, moderasyon, denetim günlüğü görüntüleme). Bunları kaldırmak bazı korumaları durdurabilir.",
   "tm.h4":"4. Erişilebilirlik","tm.b4":"Hizmet herhangi bir anda kesilebilir, değiştirilebilir veya durdurulabilir; sürekli erişim veya saldırıların %100'ünü önleme garantisi yoktur.",
@@ -600,7 +600,7 @@ I18N.tr = {
   "tm.h6":"6. Veriler","tm.b6":"Veri işleme gizlilik politikasında açıklanır.",
   "tm.h7":"7. Değişiklikler","tm.b7":"Bu koşullar güncellenebilir. Üstteki tarih son revizyonu gösterir. Kullanmaya devam etmek kabul anlamına gelir.",
   "tm.ct1":"Yayıncı: [DOLDURULACAK — adın/kullanıcı adın]","tm.ct2":"İletişim: [DOLDURULACAK — e-posta veya Discord]",
-  "tm.foot":"Guardian, Discord Inc. ile bağlantılı değildir."
+  "tm.foot":"WhiteTree, Discord Inc. ile bağlantılı değildir."
 };
 
 I18N.ar = {
@@ -628,8 +628,8 @@ I18N.ar = {
   "set3":"أدنى عمر للحساب","set3d":"أقل منه يُصفّى الحساب",
   "set4":"وضع بطيء أثناء الغارة","set4d":"يُطبّق تلقائيًا ثم يُزال",
   "set5":"تشابه مضاد الانتحال","set5d":"عتبة التشابه مع الطاقم",
-  "pv.eye":"Guardian · بوت حماية Discord","pv.h":"سياسة الخصوصية","pv.upd":"آخر تحديث: يونيو 2026",
-  "pv.intro":"Guardian («البوت») هو بوت إشراف مضاد للغارات على Discord. توضح هذه الصفحة ببساطة ما البيانات التي تُعالَج ولماذا وما الذي لا يُحفظ أبدًا.",
+  "pv.eye":"WhiteTree · بوت حماية Discord","pv.h":"سياسة الخصوصية","pv.upd":"آخر تحديث: يونيو 2026",
+  "pv.intro":"WhiteTree («البوت») هو بوت إشراف مضاد للغارات على Discord. توضح هذه الصفحة ببساطة ما البيانات التي تُعالَج ولماذا وما الذي لا يُحفظ أبدًا.",
   "pv.h1":"ما الذي يعالجه البوت",
   "pv.l1":"إعداد الخادم: عتبات الحماية، قناة السجلات، أدوار الطاقم، القائمة البيضاء.",
   "pv.l2":"المعرّفات التقنية: معرّفات الخوادم والقنوات والأدوار والمستخدمين في إجراء ما.",
@@ -644,9 +644,9 @@ I18N.ar = {
   "pv.h5":"الأمان","pv.sec":"تُخزَّن البيانات محليًا لدى مضيف البوت وتُحمى بصلاحياته. لا يُكشف الرمز المميّز وبيانات الدخول أبدًا.",
   "pv.h6":"التواصل","pv.ct1":"المسؤول عن البيانات: [يُكمَّل — اسمك/معرّفك]","pv.ct2":"التواصل: [يُكمَّل — البريد أو Discord]",
   "pv.foot":"قد تتغيّر هذه السياسة؛ التاريخ في الأعلى يبيّن آخر مراجعة.",
-  "tm.eye":"Guardian · بوت حماية Discord","tm.h":"شروط الاستخدام","tm.upd":"آخر تحديث: يونيو 2026",
-  "tm.intro":"بإضافة Guardian («البوت») إلى خادم Discord، فإنك تقبل هذه الشروط. إن لم توافق فلا تُضِف البوت أو أزله.",
-  "tm.h1":"1. الغرض","tm.b1":"Guardian أداة إشراف تلقائية (مضاد غارات، تدمير، سبام، تصفية حسابات جديدة، تحقق، انتحال). يُقدَّم «كما هو» للمساعدة في حماية الخوادم.",
+  "tm.eye":"WhiteTree · بوت حماية Discord","tm.h":"شروط الاستخدام","tm.upd":"آخر تحديث: يونيو 2026",
+  "tm.intro":"بإضافة WhiteTree («البوت») إلى خادم Discord، فإنك تقبل هذه الشروط. إن لم توافق فلا تُضِف البوت أو أزله.",
+  "tm.h1":"1. الغرض","tm.b1":"WhiteTree أداة إشراف تلقائية (مضاد غارات، تدمير، سبام، تصفية حسابات جديدة، تحقق، انتحال). يُقدَّم «كما هو» للمساعدة في حماية الخوادم.",
   "tm.h2":"2. الاستخدام المقبول","tm.b2a":"يجب استخدام البوت للحماية المشروعة للخادم.","tm.b2b":"لا يجوز استخدامه للتحرش أو استهداف الأعضاء ظلمًا أو الالتفاف على قواعد Discord.","tm.b2c":"يبقى مشرف الخادم مسؤولًا عن الإعداد الذي يطبّقه.",
   "tm.h3":"3. الصلاحيات","tm.b3":"يتطلب البوت صلاحيات معينة (إدارة الأدوار والقنوات، الطرد، الحظر، الإشراف، عرض سجل التدقيق). إزالتها قد تُعطّل بعض الحمايات.",
   "tm.h4":"4. التوفّر","tm.b4":"قد تُقطع الخدمة أو تتغيّر أو تتوقف في أي وقت، دون ضمان توفّر مستمر أو منع 100% من الهجمات.",
@@ -654,7 +654,7 @@ I18N.ar = {
   "tm.h6":"6. البيانات","tm.b6":"تُوصَف معالجة البيانات في سياسة الخصوصية.",
   "tm.h7":"7. التغييرات","tm.b7":"قد تُحدَّث هذه الشروط. التاريخ في الأعلى يبيّن آخر مراجعة. الاستمرار في الاستخدام يعني القبول.",
   "tm.ct1":"الناشر: [يُكمَّل — اسمك/معرّفك]","tm.ct2":"التواصل: [يُكمَّل — البريد أو Discord]",
-  "tm.foot":"Guardian غير تابع لشركة Discord Inc."
+  "tm.foot":"WhiteTree غير تابع لشركة Discord Inc."
 };
 
 I18N.ja = {
@@ -682,8 +682,8 @@ I18N.ja = {
   "set3":"最小アカウント年齢","set3d":"これ未満は除外されます",
   "set4":"レイド中のスローモード","set4d":"自動で適用し、その後解除",
   "set5":"なりすまし類似度","set5d":"スタッフとの類似しきい値",
-  "pv.eye":"Guardian · Discord 保護ボット","pv.h":"プライバシーポリシー","pv.upd":"最終更新：2026年6月",
-  "pv.intro":"Guardian（「本ボット」）は Discord 向けのレイド対策モデレーションボットです。このページは、どのデータをなぜ処理し、何を保存しないかを簡潔に説明します。",
+  "pv.eye":"WhiteTree · Discord 保護ボット","pv.h":"プライバシーポリシー","pv.upd":"最終更新：2026年6月",
+  "pv.intro":"WhiteTree（「本ボット」）は Discord 向けのレイド対策モデレーションボットです。このページは、どのデータをなぜ処理し、何を保存しないかを簡潔に説明します。",
   "pv.h1":"ボットが処理するもの",
   "pv.l1":"サーバー設定：保護しきい値、ログチャンネル、スタッフロール、ホワイトリスト。",
   "pv.l2":"技術的識別子：処理に関わるサーバー・チャンネル・ロール・ユーザーのID。",
@@ -698,9 +698,9 @@ I18N.ja = {
   "pv.h5":"セキュリティ","pv.sec":"データはボットのホスト上にローカル保存され、そのアクセス権で保護されます。トークンや認証情報は決して公開されません。",
   "pv.h6":"連絡先","pv.ct1":"データ管理者：[記入 — 名前/ハンドル]","pv.ct2":"連絡先：[記入 — メール または Discord]",
   "pv.foot":"本ポリシーは変更される場合があります。上部の日付が最新版を示します。",
-  "tm.eye":"Guardian · Discord 保護ボット","tm.h":"利用規約","tm.upd":"最終更新：2026年6月",
-  "tm.intro":"Guardian（「本ボット」）を Discord サーバーに追加すると、本規約に同意したものとみなされます。同意しない場合は追加せず、削除してください。",
-  "tm.h1":"1. 目的","tm.b1":"Guardian は自動モデレーションツール（レイド・ニューク・スパム対策、新規アカウント選別、認証、なりすまし対策）です。サーバー保護の補助として「現状のまま」提供されます。",
+  "tm.eye":"WhiteTree · Discord 保護ボット","tm.h":"利用規約","tm.upd":"最終更新：2026年6月",
+  "tm.intro":"WhiteTree（「本ボット」）を Discord サーバーに追加すると、本規約に同意したものとみなされます。同意しない場合は追加せず、削除してください。",
+  "tm.h1":"1. 目的","tm.b1":"WhiteTree は自動モデレーションツール（レイド・ニューク・スパム対策、新規アカウント選別、認証、なりすまし対策）です。サーバー保護の補助として「現状のまま」提供されます。",
   "tm.h2":"2. 許容される利用","tm.b2a":"本ボットはサーバーの正当な保護のために使用してください。","tm.b2b":"嫌がらせ、メンバーへの不当な標的化、Discord 規則の回避に使用してはいけません。","tm.b2c":"適用する設定の責任はサーバー管理者が負います。",
   "tm.h3":"3. 権限","tm.b3":"本ボットには一定の権限（ロール・チャンネル管理、キック、BAN、タイムアウト、監査ログ閲覧）が必要です。削除すると一部の保護が機能しません。",
   "tm.h4":"4. 可用性","tm.b4":"サービスはいつでも中断・変更・停止される可能性があり、継続提供や攻撃を100%防ぐ保証はありません。",
@@ -708,7 +708,7 @@ I18N.ja = {
   "tm.h6":"6. データ","tm.b6":"データ処理はプライバシーポリシーに記載されています。",
   "tm.h7":"7. 変更","tm.b7":"本規約は更新される場合があります。上部の日付が最新版を示します。継続利用は同意とみなされます。",
   "tm.ct1":"発行者：[記入 — 名前/ハンドル]","tm.ct2":"連絡先：[記入 — メール または Discord]",
-  "tm.foot":"Guardian は Discord Inc. と提携していません。"
+  "tm.foot":"WhiteTree は Discord Inc. と提携していません。"
 };
 
 I18N.ko = {
@@ -736,8 +736,8 @@ I18N.ko = {
   "set3":"최소 계정 연령","set3d":"이 미만이면 계정이 걸러집니다",
   "set4":"레이드 중 슬로우 모드","set4d":"자동 적용 후 해제",
   "set5":"사칭 유사도","set5d":"스태프와의 유사도 임계값",
-  "pv.eye":"Guardian · Discord 보호 봇","pv.h":"개인정보 처리방침","pv.upd":"최종 업데이트: 2026년 6월",
-  "pv.intro":"Guardian(「봇」)은 Discord용 레이드 방지 모더레이션 봇입니다. 이 페이지는 어떤 데이터를 왜 처리하고 무엇을 저장하지 않는지 간단히 설명합니다.",
+  "pv.eye":"WhiteTree · Discord 보호 봇","pv.h":"개인정보 처리방침","pv.upd":"최종 업데이트: 2026년 6월",
+  "pv.intro":"WhiteTree(「봇」)은 Discord용 레이드 방지 모더레이션 봇입니다. 이 페이지는 어떤 데이터를 왜 처리하고 무엇을 저장하지 않는지 간단히 설명합니다.",
   "pv.h1":"봇이 처리하는 것",
   "pv.l1":"서버 구성: 보호 임계값, 로그 채널, 스태프 역할, 화이트리스트.",
   "pv.l2":"기술 식별자: 조치에 관련된 서버·채널·역할·사용자 ID.",
@@ -752,9 +752,9 @@ I18N.ko = {
   "pv.h5":"보안","pv.sec":"데이터는 봇 호스트에 로컬로 저장되며 해당 접근 권한으로 보호됩니다. 토큰과 자격 증명은 절대 노출되지 않습니다.",
   "pv.h6":"연락처","pv.ct1":"데이터 관리자: [작성 — 이름/핸들]","pv.ct2":"연락처: [작성 — 이메일 또는 Discord]",
   "pv.foot":"이 방침은 변경될 수 있으며, 상단 날짜가 최신 개정을 나타냅니다.",
-  "tm.eye":"Guardian · Discord 보호 봇","tm.h":"이용약관","tm.upd":"최종 업데이트: 2026년 6월",
-  "tm.intro":"Guardian(「봇」)을 Discord 서버에 추가하면 본 약관에 동의하는 것입니다. 동의하지 않으면 봇을 추가하지 말거나 제거하세요.",
-  "tm.h1":"1. 목적","tm.b1":"Guardian은 자동 모더레이션 도구(레이드·누크·스팸 방지, 신규 계정 선별, 인증, 사칭 방지)입니다. 서버 보호를 돕기 위해 「있는 그대로」 제공됩니다.",
+  "tm.eye":"WhiteTree · Discord 보호 봇","tm.h":"이용약관","tm.upd":"최종 업데이트: 2026년 6월",
+  "tm.intro":"WhiteTree(「봇」)을 Discord 서버에 추가하면 본 약관에 동의하는 것입니다. 동의하지 않으면 봇을 추가하지 말거나 제거하세요.",
+  "tm.h1":"1. 목적","tm.b1":"WhiteTree은 자동 모더레이션 도구(레이드·누크·스팸 방지, 신규 계정 선별, 인증, 사칭 방지)입니다. 서버 보호를 돕기 위해 「있는 그대로」 제공됩니다.",
   "tm.h2":"2. 허용 사용","tm.b2a":"봇은 서버의 정당한 보호를 위해 사용해야 합니다.","tm.b2b":"괴롭힘, 멤버에 대한 부당한 표적화, Discord 규칙 우회에 사용할 수 없습니다.","tm.b2c":"적용한 구성에 대한 책임은 서버 관리자에게 있습니다.",
   "tm.h3":"3. 권한","tm.b3":"봇에는 특정 권한(역할·채널 관리, 추방, 차단, 타임아웃, 감사 로그 보기)이 필요합니다. 제거하면 일부 보호가 작동하지 않을 수 있습니다.",
   "tm.h4":"4. 가용성","tm.b4":"서비스는 언제든 중단·변경·종료될 수 있으며, 연속 가용성이나 공격의 100% 차단을 보장하지 않습니다.",
@@ -762,7 +762,7 @@ I18N.ko = {
   "tm.h6":"6. 데이터","tm.b6":"데이터 처리는 개인정보 처리방침에 설명되어 있습니다.",
   "tm.h7":"7. 변경","tm.b7":"본 약관은 갱신될 수 있습니다. 상단 날짜가 최신 개정을 나타냅니다. 계속 사용하면 동의로 간주됩니다.",
   "tm.ct1":"발행자: [작성 — 이름/핸들]","tm.ct2":"연락처: [작성 — 이메일 또는 Discord]",
-  "tm.foot":"Guardian은 Discord Inc.와 제휴하지 않습니다."
+  "tm.foot":"WhiteTree은 Discord Inc.와 제휴하지 않습니다."
 };
 
 I18N.zh = {
@@ -790,8 +790,8 @@ I18N.zh = {
   "set3":"最低账号年龄","set3d":"低于此值的账号会被过滤",
   "set4":"突袭期间慢速模式","set4d":"自动应用，随后移除",
   "set5":"防冒充相似度","set5d":"与管理团队的相似度阈值",
-  "pv.eye":"Guardian · Discord 防护机器人","pv.h":"隐私政策","pv.upd":"最后更新：2026 年 6 月",
-  "pv.intro":"Guardian（“本机器人”）是面向 Discord 的防突袭管理机器人。本页简要说明处理哪些数据、为何处理，以及哪些数据从不保存。",
+  "pv.eye":"WhiteTree · Discord 防护机器人","pv.h":"隐私政策","pv.upd":"最后更新：2026 年 6 月",
+  "pv.intro":"WhiteTree（“本机器人”）是面向 Discord 的防突袭管理机器人。本页简要说明处理哪些数据、为何处理，以及哪些数据从不保存。",
   "pv.h1":"机器人处理的内容",
   "pv.l1":"服务器配置：防护阈值、日志频道、管理身份组、白名单。",
   "pv.l2":"技术标识：操作涉及的服务器、频道、身份组和用户 ID。",
@@ -806,9 +806,9 @@ I18N.zh = {
   "pv.h5":"安全","pv.sec":"数据由机器人托管方本地存储，并受其访问控制保护。令牌和凭据从不泄露。",
   "pv.h6":"联系方式","pv.ct1":"数据控制者：[待填写 — 你的名称/账号]","pv.ct2":"联系方式：[待填写 — 邮箱或 Discord]",
   "pv.foot":"本政策可能变更；顶部日期表示最新修订。",
-  "tm.eye":"Guardian · Discord 防护机器人","tm.h":"服务条款","tm.upd":"最后更新：2026 年 6 月",
-  "tm.intro":"将 Guardian（“本机器人”）添加到 Discord 服务器即表示接受本条款。若不同意，请勿添加或将其移除。",
-  "tm.h1":"1. 目的","tm.b1":"Guardian 是一款自动管理工具（防突袭、防炸服、防刷屏、新账号过滤、验证、防冒充）。按“现状”提供，以帮助保护服务器。",
+  "tm.eye":"WhiteTree · Discord 防护机器人","tm.h":"服务条款","tm.upd":"最后更新：2026 年 6 月",
+  "tm.intro":"将 WhiteTree（“本机器人”）添加到 Discord 服务器即表示接受本条款。若不同意，请勿添加或将其移除。",
+  "tm.h1":"1. 目的","tm.b1":"WhiteTree 是一款自动管理工具（防突袭、防炸服、防刷屏、新账号过滤、验证、防冒充）。按“现状”提供，以帮助保护服务器。",
   "tm.h2":"2. 可接受的使用","tm.b2a":"本机器人须用于服务器的正当保护。","tm.b2b":"不得用于骚扰、不公平针对成员或规避 Discord 规则。","tm.b2c":"服务器管理员对其所应用的配置负责。",
   "tm.h3":"3. 权限","tm.b3":"本机器人需要某些权限（管理身份组、频道、踢出、封禁、禁言、查看审计日志）。移除可能使部分防护失效。",
   "tm.h4":"4. 可用性","tm.b4":"服务可能随时中断、变更或停止，不保证持续可用，也不保证拦截 100% 的攻击。",
@@ -816,7 +816,7 @@ I18N.zh = {
   "tm.h6":"6. 数据","tm.b6":"数据处理在隐私政策中说明。",
   "tm.h7":"7. 变更","tm.b7":"本条款可能更新。顶部日期表示最新修订。继续使用即视为接受。",
   "tm.ct1":"发布者：[待填写 — 你的名称/账号]","tm.ct2":"联系方式：[待填写 — 邮箱或 Discord]",
-  "tm.foot":"Guardian 与 Discord Inc. 无关联。"
+  "tm.foot":"WhiteTree 与 Discord Inc. 无关联。"
 };
 
 I18N.hi = {
@@ -844,8 +844,8 @@ I18N.hi = {
   "set3":"न्यूनतम खाता आयु","set3d":"इससे कम होने पर खाता छाना जाता है",
   "set4":"रेड के दौरान स्लो मोड","set4d":"स्वतः लागू, फिर हटाया गया",
   "set5":"नकल-रोधी समानता","set5d":"स्टाफ़ से समानता की सीमा",
-  "pv.eye":"Guardian · Discord सुरक्षा बॉट","pv.h":"गोपनीयता नीति","pv.upd":"अंतिम अद्यतन: जून 2026",
-  "pv.intro":"Guardian (\"बॉट\") Discord के लिए एक रेड-रोधी मॉडरेशन बॉट है। यह पृष्ठ सरलता से बताता है कि कौन-सा डेटा क्यों संसाधित होता है और क्या कभी संग्रहीत नहीं होता।",
+  "pv.eye":"WhiteTree · Discord सुरक्षा बॉट","pv.h":"गोपनीयता नीति","pv.upd":"अंतिम अद्यतन: जून 2026",
+  "pv.intro":"WhiteTree (\"बॉट\") Discord के लिए एक रेड-रोधी मॉडरेशन बॉट है। यह पृष्ठ सरलता से बताता है कि कौन-सा डेटा क्यों संसाधित होता है और क्या कभी संग्रहीत नहीं होता।",
   "pv.h1":"बॉट क्या संसाधित करता है",
   "pv.l1":"सर्वर कॉन्फ़िगरेशन: सुरक्षा सीमाएँ, लॉग चैनल, स्टाफ़ भूमिकाएँ, श्वेतसूची।",
   "pv.l2":"तकनीकी पहचानकर्ता: कार्रवाई में शामिल सर्वर, चैनल, भूमिका और उपयोगकर्ता ID।",
@@ -860,9 +860,9 @@ I18N.hi = {
   "pv.h5":"सुरक्षा","pv.sec":"डेटा बॉट के होस्ट पर स्थानीय रूप से संग्रहीत और उसकी पहुँच से सुरक्षित रहता है। टोकन और क्रेडेंशियल कभी उजागर नहीं होते।",
   "pv.h6":"संपर्क","pv.ct1":"डेटा नियंत्रक: [भरें — आपका नाम/हैंडल]","pv.ct2":"संपर्क: [भरें — ईमेल या Discord]",
   "pv.foot":"यह नीति बदल सकती है; ऊपर की तारीख नवीनतम संशोधन दर्शाती है।",
-  "tm.eye":"Guardian · Discord सुरक्षा बॉट","tm.h":"सेवा की शर्तें","tm.upd":"अंतिम अद्यतन: जून 2026",
-  "tm.intro":"Guardian (\"बॉट\") को किसी Discord सर्वर में जोड़ने पर आप इन शर्तों को स्वीकार करते हैं। असहमत होने पर बॉट न जोड़ें या हटा दें।",
-  "tm.h1":"1. उद्देश्य","tm.b1":"Guardian एक स्वचालित मॉडरेशन उपकरण है (रेड, न्यूक, स्पैम-रोधी, नए खाते छानना, सत्यापन, नकल-रोधी)। यह सर्वर सुरक्षा में मदद हेतु \"जैसा है\" प्रदान किया जाता है।",
+  "tm.eye":"WhiteTree · Discord सुरक्षा बॉट","tm.h":"सेवा की शर्तें","tm.upd":"अंतिम अद्यतन: जून 2026",
+  "tm.intro":"WhiteTree (\"बॉट\") को किसी Discord सर्वर में जोड़ने पर आप इन शर्तों को स्वीकार करते हैं। असहमत होने पर बॉट न जोड़ें या हटा दें।",
+  "tm.h1":"1. उद्देश्य","tm.b1":"WhiteTree एक स्वचालित मॉडरेशन उपकरण है (रेड, न्यूक, स्पैम-रोधी, नए खाते छानना, सत्यापन, नकल-रोधी)। यह सर्वर सुरक्षा में मदद हेतु \"जैसा है\" प्रदान किया जाता है।",
   "tm.h2":"2. स्वीकार्य उपयोग","tm.b2a":"बॉट का उपयोग सर्वर की वैध सुरक्षा के लिए होना चाहिए।","tm.b2b":"इसका उपयोग उत्पीड़न, सदस्यों को अनुचित रूप से निशाना बनाने या Discord नियमों से बचने हेतु नहीं किया जा सकता।","tm.b2c":"लागू कॉन्फ़िगरेशन के लिए सर्वर व्यवस्थापक उत्तरदायी रहता है।",
   "tm.h3":"3. अनुमतियाँ","tm.b3":"बॉट को कुछ अनुमतियाँ चाहिए (भूमिकाएँ, चैनल प्रबंधन, किक, बैन, मॉडरेट, ऑडिट लॉग देखना)। हटाने पर कुछ सुरक्षाएँ काम नहीं करेंगी।",
   "tm.h4":"4. उपलब्धता","tm.b4":"सेवा कभी भी बाधित, बदली या बंद की जा सकती है; निरंतर उपलब्धता या 100% हमलों को रोकने की कोई गारंटी नहीं।",
@@ -870,7 +870,7 @@ I18N.hi = {
   "tm.h6":"6. डेटा","tm.b6":"डेटा संसाधन गोपनीयता नीति में वर्णित है।",
   "tm.h7":"7. परिवर्तन","tm.b7":"ये शर्तें अद्यतन हो सकती हैं। ऊपर की तारीख नवीनतम संशोधन दर्शाती है। निरंतर उपयोग स्वीकृति माना जाता है।",
   "tm.ct1":"प्रकाशक: [भरें — आपका नाम/हैंडल]","tm.ct2":"संपर्क: [भरें — ईमेल या Discord]",
-  "tm.foot":"Guardian, Discord Inc. से संबद्ध नहीं है।"
+  "tm.foot":"WhiteTree, Discord Inc. से संबद्ध नहीं है।"
 };
 
 const EDITOR = "Kan | Kan_Inthesky";
