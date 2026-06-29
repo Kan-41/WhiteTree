@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guardian — Dashboard</title>
+<style>
+  :root{
+    --ink:#191917; --ink-soft:#54534e; --faint:#8b8a83;
+    --line:#eceae4; --line-2:#e3e1da;
+    --paper:#ffffff; --paper-2:#faf9f6; --paper-3:#f5f4ef;
+    --sage:#4f6f57; --sage-bg:#eef3ee;
+    --amber:#9a6b1f; --amber-bg:#f7f0e2;
+    --rust:#9c4221; --rust-bg:#f7ece6;
+    --radius:12px;
+    --serif: ui-serif, Georgia, "Times New Roman", serif;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  body.dark{
+    --ink:#f3f2ee; --ink-soft:#b6b4ad; --faint:#7c7b74;
+    --line:#262623; --line-2:#34332f;
+    --paper:#151513; --paper-2:#0d0d0c; --paper-3:#1e1e1b;
+    --sage:#f0efe9; --sage-bg:#242421;
+    --amber:#cbc9c2; --amber-bg:#201f1d;
+    --rust:#ecebe6; --rust-bg:#2a2a26;
+  }
+  body.dark .crest{background:#f3f2ee; color:#0d0d0c;}
+  body.dark .status{background:#1c1c19; border-color:#33322e;}
+  body.dark .status .led{box-shadow:0 0 0 3px rgba(240,239,233,.14);}
+  body.dark .switch input:checked + .track::after{background:#0d0d0c;}
+  body.dark input[type=range]{background:var(--line-2);}
+  body.dark input[type=range]::-webkit-slider-thumb{background:#f3f2ee;}
+  body.dark .tag.ban,body.dark .tag.kick{background:#2c2c28; color:#f1f0ec;}
+  body.dark .tag.quar{background:#222220; color:#cfcdc6;}
+  body.dark .tag.mute{background:#1c1c1a; color:#a9a8a1;}
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{font-family:var(--sans); color:var(--ink); background:var(--paper-2);
+    -webkit-font-smoothing:antialiased; font-size:14.5px; line-height:1.55;
+    transition:background .2s, color .2s;}
+  .app{display:grid; grid-template-columns:236px 1fr; min-height:100vh;}
+  [dir=rtl] aside{border-right:0; border-left:1px solid var(--line);}
+  aside{background:var(--paper); border-right:1px solid var(--line);
+    padding:26px 18px; display:flex; flex-direction:column; gap:28px;
+    position:sticky; top:0; height:100vh;}
+  .brand{display:flex; align-items:center; gap:11px; padding:0 6px;}
+  .crest{width:34px; height:34px; border-radius:9px; background:var(--ink);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-size:18px; font-weight:600;}
+  .brand b{font-family:var(--serif); font-size:18px; font-weight:600; letter-spacing:-.01em;}
+  .brand span{display:block; font-size:11px; color:var(--faint); letter-spacing:.04em;}
+  nav{display:flex; flex-direction:column; gap:2px;}
+  .navitem{display:flex; align-items:center; gap:11px; padding:9px 11px; border-radius:9px;
+    color:var(--ink-soft); cursor:pointer; font-size:14px; border:1px solid transparent;
+    transition:background .12s, color .12s;}
+  .navitem:hover{background:var(--paper-3);}
+  .navitem.active{background:var(--paper-3); color:var(--ink); border-color:var(--line-2); font-weight:500;}
+  .navitem .dot{width:7px; height:7px; border-radius:50%; background:var(--sage); margin-left:auto;}
+  [dir=rtl] .navitem .dot{margin-left:0; margin-right:auto;}
+  .ico{width:17px; height:17px; flex:none; stroke:currentColor; fill:none; stroke-width:1.6;}
+  .side-foot{margin-top:auto; font-size:12px; color:var(--faint); padding:0 6px; line-height:1.8;}
+  .side-foot .ok{color:var(--sage); font-weight:500;}
+  .topbar{display:flex; align-items:center; justify-content:space-between;
+    padding:20px 34px; border-bottom:1px solid var(--line); background:var(--paper);
+    position:sticky; top:0; z-index:5;}
+  .server{display:flex; align-items:center; gap:13px;}
+  .server .pic{width:38px; height:38px; border-radius:10px; background:var(--paper-3);
+    border:1px solid var(--line-2); display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-weight:600; color:var(--ink-soft); font-size:15px;}
+  .server h1{font-family:var(--serif); font-size:19px; font-weight:600; margin:0; letter-spacing:-.01em;}
+  .server p{margin:0; font-size:12.5px; color:var(--faint);}
+  .topright{display:flex; align-items:center; gap:12px;}
+  .langsel,.themebtn{font-family:var(--sans); font-size:13px; color:var(--ink-soft);
+    background:var(--paper); border:1px solid var(--line-2); padding:7px 12px;
+    border-radius:999px; cursor:pointer;}
+  .themebtn:hover,.langsel:hover{background:var(--paper-3); color:var(--ink);}
+  .status{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-soft);
+    background:var(--sage-bg); border:1px solid #dde7dd; padding:7px 13px; border-radius:999px;}
+  .status .led{width:8px; height:8px; border-radius:50%; background:var(--sage);
+    box-shadow:0 0 0 3px rgba(79,111,87,.16);}
+  .view{padding:30px 34px 60px; max-width:1080px;}
+  .hidden{display:none;}
+  .eyebrow{font-size:11.5px; text-transform:uppercase; letter-spacing:.13em; color:var(--faint); margin:0 0 6px;}
+  .h-sec{font-family:var(--serif); font-size:24px; font-weight:600; margin:0 0 3px; letter-spacing:-.015em;}
+  .sub{color:var(--faint); font-size:13.5px; margin:0 0 26px;}
+  .metrics{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:30px;}
+  .metric{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:18px 19px;}
+  .metric .k{font-size:12.5px; color:var(--faint); margin-bottom:12px;}
+  .metric .v{font-family:var(--serif); font-size:31px; font-weight:600; line-height:1; letter-spacing:-.02em;}
+  .metric .tr{font-size:12px; margin-top:9px; color:var(--faint);}
+  .grid-2{display:grid; grid-template-columns:1.55fr 1fr; gap:18px;}
+  .panel{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:21px 22px;}
+  .panel h3{font-family:var(--serif); font-size:16.5px; font-weight:600; margin:0 0 2px;}
+  .panel .ph{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:18px;}
+  .panel .ph span{font-size:12px; color:var(--faint);}
+  .chart{width:100%; height:190px;}
+  .legend{display:flex; gap:18px; margin-top:14px; font-size:12.5px; color:var(--ink-soft);}
+  .legend i{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:-1px;}
+  .mods{display:flex; flex-direction:column;}
+  .mod{display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid var(--line);}
+  .mod:last-child{border-bottom:0;}
+  .mod .badge{margin-left:auto; font-size:11.5px; padding:4px 10px; border-radius:999px;
+    background:var(--sage-bg); color:var(--sage); border:1px solid #dde7dd;}
+  [dir=rtl] .mod .badge{margin-left:0; margin-right:auto;}
+  .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .pcard{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:20px 21px;}
+  .pcard .top{display:flex; align-items:flex-start; gap:13px;}
+  .pcard .gi{width:40px; height:40px; border-radius:10px; background:var(--paper-3);
+    border:1px solid var(--line-2); display:flex; align-items:center; justify-content:center; flex:none;}
+  .pcard .gi svg{width:20px; height:20px; stroke:var(--ink); fill:none; stroke-width:1.6;}
+  .pcard h4{font-family:var(--serif); font-size:16px; font-weight:600; margin:0;}
+  .pcard p{margin:12px 0 0; font-size:13px; color:var(--ink-soft); line-height:1.5;}
+  .switch{position:relative; width:42px; height:24px; cursor:pointer; margin-left:auto; flex:none;}
+  [dir=rtl] .switch{margin-left:0; margin-right:auto;}
+  .switch input{opacity:0; width:0; height:0;}
+  .track{position:absolute; inset:0; border-radius:999px; background:#dcdad3; transition:background .18s;}
+  .track::after{content:""; position:absolute; top:3px; left:3px; width:18px; height:18px;
+    border-radius:50%; background:#fff; transition:transform .18s; box-shadow:0 1px 2px rgba(0,0,0,.18);}
+  .switch input:checked + .track{background:var(--sage);}
+  .switch input:checked + .track::after{transform:translateX(18px);}
+  table{width:100%; border-collapse:collapse; font-size:13.5px;}
+  thead th{text-align:left; font-weight:500; color:var(--faint); font-size:12px;
+    text-transform:uppercase; letter-spacing:.06em; padding:0 0 12px; border-bottom:1px solid var(--line);}
+  [dir=rtl] thead th{text-align:right;}
+  tbody td{padding:13px 0; border-bottom:1px solid var(--line); vertical-align:middle;}
+  tbody tr:last-child td{border-bottom:0;}
+  .who{display:flex; align-items:center; gap:10px;}
+  .av{width:30px; height:30px; border-radius:50%; background:var(--paper-3); border:1px solid var(--line-2);
+    display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--ink-soft); font-weight:500;}
+  .tag{font-size:11.5px; padding:3px 9px; border-radius:999px; font-weight:500;}
+  .tag.ban,.tag.kick{background:var(--rust-bg); color:var(--rust);}
+  .tag.quar{background:var(--amber-bg); color:var(--amber);}
+  .tag.mute{background:var(--paper-3); color:var(--ink-soft);}
+  .muted{color:var(--faint);}
+  .btn{font-family:var(--sans); font-size:13px; color:var(--ink); background:var(--paper);
+    border:1px solid var(--line-2); padding:6px 13px; border-radius:8px; cursor:pointer;}
+  .btn:hover{background:var(--paper-3);}
+  .setrow{display:flex; align-items:center; justify-content:space-between; gap:24px;
+    padding:18px 0; border-bottom:1px solid var(--line);}
+  .setrow:last-child{border-bottom:0;}
+  .setrow .lab b{font-weight:500;} .setrow .lab p{margin:3px 0 0; font-size:12.5px; color:var(--faint);}
+  .range{display:flex; align-items:center; gap:14px; min-width:240px;}
+  input[type=range]{-webkit-appearance:none; appearance:none; height:4px; width:170px; border-radius:4px; background:var(--line-2);}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none; width:17px; height:17px; border-radius:50%; background:var(--ink); cursor:pointer;}
+  .range b{font-variant-numeric:tabular-nums; min-width:54px; text-align:right; font-weight:500;}
+  @media(max-width:880px){.app{grid-template-columns:1fr;} aside{display:none;}
+    .metrics,.cards{grid-template-columns:1fr 1fr;} .grid-2{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div class="brand">
+      <div class="crest">G</div>
+      <div><b>Guardian</b><span data-i18n="d.sub"></span></div>
+    </div>
+    <nav>
+      <div class="navitem active" data-view="overview">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M4 13h6V4H4zM14 20h6V4h-6zM4 20h6v-4H4z"/></svg>
+        <span data-i18n="n.ov"></span></div>
+      <div class="navitem" data-view="protections">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3 7.5-8 9-5-1.5-8-4.5-8-9V6z"/></svg>
+        <span data-i18n="n.pr"></span> <span class="dot"></span></div>
+      <div class="navitem" data-view="quarantine">
+        <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+        <span data-i18n="n.qu"></span></div>
+      <div class="navitem" data-view="journal">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5z"/><path d="M9 9h7M9 13h7M9 17h4"/></svg>
+        <span data-i18n="n.jo"></span></div>
+      <div class="navitem" data-view="settings">
+        <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+        <span data-i18n="n.se"></span></div>
+    </nav>
+    <div class="side-foot">
+      <span data-i18n="s.mod"></span> · <span class="ok" data-i18n="s.act"></span><br>
+      v2.0 · discord.py
+    </div>
+  </aside>
+
+  <main>
+    <div class="topbar">
+      <div class="server">
+        <div class="pic">LC</div>
+        <div><h1>La Communauté</h1><p>1,284 members</p></div>
+      </div>
+      <div class="topright">
+        <select class="langsel" aria-label="Language"></select>
+        <button class="themebtn" id="themebtn"></button>
+        <div class="status"><span class="led"></span> <span data-i18n="top.status"></span></div>
+      </div>
+    </div>
+
+    <section class="view" id="overview">
+      <p class="eyebrow" data-i18n="o.eye"></p>
+      <h2 class="h-sec" data-i18n="o.h"></h2>
+      <p class="sub" data-i18n="o.sub"></p>
+      <div class="metrics">
+        <div class="metric"><div class="k" data-i18n="mc.raid"></div><div class="v">14</div><div class="tr" data-i18n="mc.raidT"></div></div>
+        <div class="metric"><div class="k" data-i18n="mc.acc"></div><div class="v">237</div><div class="tr" data-i18n="mc.accT"></div></div>
+        <div class="metric"><div class="k" data-i18n="mc.san"></div><div class="v">9</div><div class="tr" data-i18n="mc.sanT"></div></div>
+        <div class="metric"><div class="k" data-i18n="mc.up"></div><div class="v">99.9%</div><div class="tr" data-i18n="mc.upT"></div></div>
+      </div>
+      <div class="grid-2">
+        <div class="panel">
+          <div class="ph"><h3 data-i18n="p.act"></h3><span data-i18n="p.7d"></span></div>
+          <svg class="chart" viewBox="0 0 560 190" preserveAspectRatio="none" id="spark"></svg>
+          <div class="legend">
+            <span><i style="background:#c9d6cc"></i><span data-i18n="lg.filt"></span></span>
+            <span><i style="background:var(--sage)"></i><span data-i18n="lg.san"></span></span>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="ph"><h3 data-i18n="p.mod"></h3><span>7 / 7</span></div>
+          <div class="mods" id="modlist"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="protections">
+      <p class="eyebrow" data-i18n="pr.eye"></p>
+      <h2 class="h-sec" data-i18n="pr.h"></h2>
+      <p class="sub" data-i18n="pr.sub"></p>
+      <div class="cards" id="pcards"></div>
+    </section>
+
+    <section class="view hidden" id="quarantine">
+      <p class="eyebrow" data-i18n="qu.eye"></p>
+      <h2 class="h-sec" data-i18n="qu.h"></h2>
+      <p class="sub" data-i18n="qu.sub"></p>
+      <div class="panel">
+        <table>
+          <thead><tr><th data-i18n="th.member"></th><th data-i18n="th.reason"></th><th data-i18n="th.module"></th><th data-i18n="th.since"></th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="who"><div class="av">k7</div>kit_7782</div></td><td class="muted">new account · 4h</td><td class="muted" data-i18n="m4n"></td><td class="muted">12 min</td><td style="text-align:right"><button class="btn" data-i18n="btn.release"></button></td></tr>
+            <tr><td><div class="who"><div class="av">Mo</div>Moderateur_</div></td><td class="muted">impersonation · 94%</td><td class="muted" data-i18n="m6n"></td><td class="muted">1 h</td><td style="text-align:right"><button class="btn" data-i18n="btn.release"></button></td></tr>
+            <tr><td><div class="who"><div class="av">bt</div>botnet_x99</div></td><td class="muted">join wave</td><td class="muted" data-i18n="m1n"></td><td class="muted">2 d</td><td style="text-align:right"><button class="btn" data-i18n="btn.release"></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="view hidden" id="journal">
+      <p class="eyebrow" data-i18n="jo.eye"></p>
+      <h2 class="h-sec" data-i18n="jo.h"></h2>
+      <p class="sub" data-i18n="jo.sub"></p>
+      <div class="panel">
+        <table>
+          <thead><tr><th data-i18n="th.time"></th><th data-i18n="th.member"></th><th data-i18n="th.action"></th><th data-i18n="th.module"></th><th data-i18n="th.reason"></th></tr></thead>
+          <tbody>
+            <tr><td class="muted">14:02</td><td><div class="who"><div class="av">sp</div>spammer_44</div></td><td><span class="tag mute">timeout</span></td><td class="muted" data-i18n="m3n"></td><td>flood</td></tr>
+            <tr><td class="muted">13:47</td><td><div class="who"><div class="av">@e</div>raid_0091</div></td><td><span class="tag kick">kick</span></td><td class="muted" data-i18n="m3n"></td><td>@everyone</td></tr>
+            <tr><td class="muted">11:20</td><td><div class="who"><div class="av">nk</div>nuker_alt</div></td><td><span class="tag quar">quarantine</span></td><td class="muted" data-i18n="m2n"></td><td>channel deletion</td></tr>
+            <tr><td class="muted">09:58</td><td><div class="who"><div class="av">k7</div>kit_7782</div></td><td><span class="tag quar">quarantine</span></td><td class="muted" data-i18n="m4n"></td><td>account too new</td></tr>
+            <tr><td class="muted">Yesterday</td><td><div class="who"><div class="av">bt</div>botnet_x99</div></td><td><span class="tag ban">ban</span></td><td class="muted" data-i18n="m1n"></td><td>join wave (×12)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="view hidden" id="settings">
+      <p class="eyebrow" data-i18n="se.eye"></p>
+      <h2 class="h-sec" data-i18n="se.h"></h2>
+      <p class="sub" data-i18n="se.sub"></p>
+      <div class="panel">
+        <div class="setrow"><div class="lab"><b data-i18n="set1"></b><p data-i18n="set1d"></p></div>
+          <div class="range"><input type="range" min="3" max="20" value="8" oninput="this.nextElementSibling.textContent=this.value"><b>8</b></div></div>
+        <div class="setrow"><div class="lab"><b data-i18n="set2"></b><p data-i18n="set2d"></p></div>
+          <div class="range"><input type="range" min="5" max="60" value="10" oninput="this.nextElementSibling.textContent=this.value+' s'"><b>10 s</b></div></div>
+        <div class="setrow"><div class="lab"><b data-i18n="set3"></b><p data-i18n="set3d"></p></div>
+          <div class="range"><input type="range" min="0" max="30" value="7" oninput="this.nextElementSibling.textContent=this.value+' d'"><b>7 d</b></div></div>
+        <div class="setrow"><div class="lab"><b data-i18n="set4"></b><p data-i18n="set4d"></p></div>
+          <div class="range"><input type="range" min="0" max="60" value="15" oninput="this.nextElementSibling.textContent=this.value+' s'"><b>15 s</b></div></div>
+        <div class="setrow"><div class="lab"><b data-i18n="set5"></b><p data-i18n="set5d"></p></div>
+          <div class="range"><input type="range" min="70" max="100" value="85" oninput="this.nextElementSibling.textContent=this.value+' %'"><b>85 %</b></div></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="i18n.js"></script>
+<script>
+  const items = document.querySelectorAll('.navitem');
+  const views = document.querySelectorAll('.view');
+  items.forEach(it=>it.addEventListener('click',()=>{
+    items.forEach(x=>x.classList.remove('active'));
+    it.classList.add('active');
+    const v = it.dataset.view;
+    views.forEach(s=>s.classList.toggle('hidden', s.id!==v));
+  }));
+
+  const ICONS = {
+    shield:"M12 3l8 3v6c0 4.5-3 7.5-8 9-5-1.5-8-4.5-8-9V6z",
+    bolt:"M4 5h16v10H7l-3 3z", check:"M5 12l5 5L20 7"
+  };
+  const MODS = [
+    ["m1n","m1d",ICONS.shield],["m2n","m2d",ICONS.shield],["m3n","m3d",ICONS.bolt],
+    ["m4n","m4d",ICONS.shield],["m5n","m5d",ICONS.check],["m6n","m6d",ICONS.shield]
+  ];
+  function render(){
+    document.getElementById('pcards').innerHTML = MODS.map((m,i)=>`
+      <div class="pcard">
+        <div class="top">
+          <div class="gi"><svg viewBox="0 0 24 24"><path d="${m[2]}"/></svg></div>
+          <div><h4>${t(m[0])}</h4></div>
+          <label class="switch"><input type="checkbox" ${i!==5?'checked':''}><span class="track"></span></label>
+        </div>
+        <p>${t(m[1])}</p>
+      </div>`).join('');
+    document.getElementById('modlist').innerHTML = MODS.map(m=>`
+      <div class="mod"><div>${t(m[0])}</div><span class="badge">${t('badge.active')}</span></div>`).join('');
+  }
+
+  function drawChart(){
+    const filt=[120,98,140,176,90,150,237], sanc=[6,4,9,21,5,11,9];
+    const W=560,H=190,pad=8, max=250, n=filt.length, gap=W/(n-1);
+    const X=i=>i*gap, Y=v=>H-pad-(v/max)*(H-pad*2);
+    const dark=document.body.classList.contains('dark');
+    const cFill=dark?'#1f1f1c':'#eef2ee', cFaint=dark?'#4a4a45':'#c2d0c6', cMain=dark?'#f0efe9':'#4f6f57';
+    const line=a=>a.map((v,i)=>`${i?'L':'M'}${X(i).toFixed(1)} ${Y(v).toFixed(1)}`).join(' ');
+    const area=a=>`${line(a)} L${W} ${H} L0 ${H} Z`;
+    document.getElementById('spark').innerHTML=`
+      <path d="${area(filt)}" fill="${cFill}"/>
+      <path d="${line(filt)}" fill="none" stroke="${cFaint}" stroke-width="2"/>
+      <path d="${line(sanc)}" fill="none" stroke="${cMain}" stroke-width="2.4"/>
+      ${filt.map((v,i)=>`<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="2.4" fill="${cFaint}"/>`).join('')}
+      ${sanc.map((v,i)=>`<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="3" fill="${cMain}"/>`).join('')}`;
+  }
+
+  const sun='M12 4V2M12 22v-2M4 12H2M22 12h-2M5.6 5.6L4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4M12 8a4 4 0 100 8 4 4 0 000-8z';
+  const tb=document.getElementById('themebtn');
+  function themeLabel(){ tb.textContent = document.body.classList.contains('dark') ? t('t.light') : t('t.dark'); }
+  tb.addEventListener('click',()=>{ document.body.classList.toggle('dark'); themeLabel(); drawChart(); });
+
+  document.addEventListener('langchange', ()=>{ render(); themeLabel(); });
+  render(); themeLabel(); drawChart();
+</script>
+</body>
+</html>

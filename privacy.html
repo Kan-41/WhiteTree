@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Guardian</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#6b6b6b; --line:#ececec;
+    --paper:#fff; --card:#fafafa; --body:#2a2a2a; }
+  body.dark { --ink:#f3f2ee; --muted:#9b9a93; --line:#2a2a27;
+    --paper:#0d0d0c; --card:#161614; --body:#cdccc5; }
+  * { box-sizing: border-box; }
+  body { font-family: ui-serif, Georgia, "Times New Roman", serif; color: var(--ink);
+    background: var(--paper); margin: 0; line-height: 1.7; -webkit-font-smoothing: antialiased;
+    transition: background .2s, color .2s; }
+  .controls { position: fixed; top: 18px; right: 18px; z-index: 10; display: flex; gap: 8px; }
+  .controls select, .controls button {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; color: var(--muted);
+    background: var(--paper); border: 1px solid var(--line); padding: 7px 12px;
+    border-radius: 999px; cursor: pointer; }
+  .controls button:hover, .controls select:hover { color: var(--ink); }
+  [dir=rtl] .controls { right: auto; left: 18px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 28px 96px; }
+  .eyebrow { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 12px;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+  h1 { font-size: 34px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 6px; }
+  .updated { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px;
+    color: var(--muted); margin-bottom: 44px; }
+  h2 { font-size: 19px; font-weight: 600; margin: 40px 0 10px; }
+  p, li { font-size: 16.5px; color: var(--body); }
+  ul { padding-left: 22px; } li { margin: 6px 0; }
+  a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+  .rule { height: 1px; background: var(--line); border: 0; margin: 48px 0 0; }
+  .card { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14.5px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 20px 0; color: var(--body); }
+  footer { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px;
+    color: var(--muted); margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="controls">
+  <select class="langsel" aria-label="Language"></select>
+  <button id="themebtn"></button>
+</div>
+<div class="wrap">
+  <div class="eyebrow" data-i18n="pv.eye"></div>
+  <h1 data-i18n="pv.h"></h1>
+  <div class="updated" data-i18n="pv.upd"></div>
+
+  <p data-i18n="pv.intro"></p>
+
+  <h2 data-i18n="pv.h1"></h2>
+  <ul>
+    <li data-i18n="pv.l1"></li>
+    <li data-i18n="pv.l2"></li>
+    <li data-i18n="pv.l3"></li>
+    <li data-i18n="pv.l4"></li>
+  </ul>
+
+  <h2 data-i18n="pv.h2"></h2>
+  <div class="card" data-i18n="pv.c"></div>
+
+  <h2 data-i18n="pv.h3"></h2>
+  <ul>
+    <li data-i18n="pv.n1"></li>
+    <li data-i18n="pv.n2"></li>
+    <li data-i18n="pv.n3"></li>
+  </ul>
+
+  <h2 data-i18n="pv.h4"></h2>
+  <p data-i18n="pv.ret"></p>
+
+  <h2 data-i18n="pv.h5"></h2>
+  <p data-i18n="pv.sec"></p>
+
+  <h2 data-i18n="pv.h6"></h2>
+  <p data-i18n="pv.ct1"></p>
+  <p data-i18n-html="pv.ct2"></p>
+
+  <hr class="rule">
+  <footer data-i18n="pv.foot"></footer>
+</div>
+<script src="i18n.js"></script>
+<script>
+  const tb = document.getElementById("themebtn");
+  function themeLabel(){ tb.textContent = document.body.classList.contains("dark") ? t("t.light") : t("t.dark"); }
+  tb.addEventListener("click", ()=>{ document.body.classList.toggle("dark"); themeLabel(); });
+  document.addEventListener("langchange", themeLabel);
+  themeLabel();
+</script>
+</body>
+</html>
