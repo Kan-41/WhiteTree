@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation — WhiteTree</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<nav class="nav"><div class="container nav-in">
+  <a class="brand" href="index.html"><span class="logo"><img src="bot.png" onerror="this.replaceWith(document.createTextNode('W'))"></span>WhiteTree</a>
+  <div class="nav-links">
+    <a href="documentation.html" data-i18n="nav.docs">Documentation</a>
+    <a href="terms.html" data-i18n="nav.terms">Terms</a>
+    <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+  </div>
+  <div class="nav-right">
+    <button class="pill langpill" onclick="toggleLang()">EN</button>
+    <button class="pill themepill" onclick="toggleTheme()">☽</button>
+    <a class="pill" data-support href="#" data-i18n="nav.support">Support</a>
+    <a class="btn" data-login href="#" data-i18n="cta.login">Open dashboard</a>
+  </div>
+</div></nav>
+
+<div class="container page"><div class="layout">
+  <aside class="side"><nav class="toc">
+    <a href="#start">Getting started</a>
+    <a href="#invite">Invite the bot</a>
+    <a href="#commands">Commands</a>
+    <a href="#protections">Protections</a>
+    <a href="#verification">Verification panel</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#faq">FAQ</a>
+  </nav></aside>
+
+  <main class="prose">
+    <h1>Documentation</h1>
+    <div class="updated">WhiteTree — anti-raid &amp; server protection</div>
+
+    <h2 id="start">Getting started</h2>
+    <p>WhiteTree protects Discord servers against raids, nukes, spam and fake accounts.
+    All protections are <strong>on by default</strong> — you can invite the bot and it works
+    immediately, no setup required.</p>
+    <div class="callout">On join, WhiteTree automatically creates a <code>Quarantine</code> role.
+    Make sure the bot's role is placed <strong>high</strong> in your role list so it can act on members.</div>
+
+    <h2 id="invite">Invite the bot</h2>
+    <p>Use the invite link with the recommended permissions (manage roles &amp; channels, kick,
+    ban, timeout, view audit log). Then move the WhiteTree role near the top of
+    <em>Server Settings → Roles</em>.</p>
+    <p><a class="btn" data-invite href="#" style="margin-top:6px"><span data-i18n="cta.invite">Add to Discord</span></a></p>
+
+    <h2 id="commands">Commands</h2>
+    <h3>Setup</h3>
+    <div class="cmd">
+      <div class="row"><code>/setup [log-channel]</code><span>Guided setup: log channel + quarantine role</span></div>
+      <div class="row"><code>/status</code><span>Show the state of every protection</span></div>
+      <div class="row"><code>/set &lt;param&gt; &lt;value&gt;</code><span>Change a threshold, e.g. <code>/set raid_join_count 12</code></span></div>
+      <div class="row"><code>/whitelist &lt;user&gt;</code><span>Exempt a trusted user or bot</span></div>
+      <div class="row"><code>/modrole &lt;role&gt;</code><span>Mark a staff role as exempt</span></div>
+      <div class="row"><code>/language &lt;lang&gt;</code><span>Change the bot's language (EN/FR/ES/DE)</span></div>
+    </div>
+    <h3>Protection toggles</h3>
+    <div class="cmd">
+      <div class="row"><code>/raidmode &lt;on/off&gt;</code><span>Enable or disable anti-raid</span></div>
+      <div class="row"><code>/antinuke &lt;on/off&gt;</code><span>Enable or disable anti-nuke</span></div>
+      <div class="row"><code>/antispam &lt;on/off&gt;</code><span>Enable or disable anti-spam</span></div>
+      <div class="row"><code>/lockdown</code> · <code>/unlock</code><span>Manually lock / unlock the server</span></div>
+      <div class="row"><code>/verifypanel</code><span>Post the verification button</span></div>
+    </div>
+    <h3>Moderation</h3>
+    <div class="cmd">
+      <div class="row"><code>/unquarantine &lt;user&gt;</code><span>Release a member and restore their roles</span></div>
+      <div class="row"><code>/quarantines</code><span>List members currently in quarantine</span></div>
+      <div class="row"><code>/history</code><span>Recent automatic sanctions</span></div>
+      <div class="row"><code>/help</code><span>Show the in-Discord help menu</span></div>
+    </div>
+
+    <h2 id="protections">Protections</h2>
+    <p><strong>Anti-raid</strong> — detects join waves (X joins in Y seconds) and locks the server,
+    raising Discord's native verification level and applying slowmode, restoring everything after.</p>
+    <p><strong>Anti-nuke</strong> — watches the audit log for mass channel/role deletions, webhook
+    creation, mass bans/kicks and permission escalation; the responsible account is quarantined.</p>
+    <p><strong>Anti-spam</strong> — flood, repeated messages, excessive mentions, <code>@everyone</code>
+    and unauthorized <code>discord.gg</code> invites are deleted and the author is timed out.</p>
+    <p><strong>New accounts</strong> — a risk score (account age, avatar, bot-like name, spammer flag)
+    filters suspicious accounts at the gate.</p>
+    <p><strong>Anti-impersonation</strong> — flags usernames that copy your staff, including accents
+    and full-width unicode.</p>
+
+    <h2 id="verification">Verification panel</h2>
+    <p>Run <code>/verifypanel</code> in a channel to post a “Verify” button. New members must click it
+    to gain access — raid bots don't click, so it's a very effective gate. Passing members get their
+    roles back automatically.</p>
+
+    <h2 id="dashboard">Dashboard</h2>
+    <p>The dashboard shows each server's live protection status, recent sanctions and quarantined
+    members, and lets you change the bot's language. Sign in with Discord to see the servers where
+    you're an admin and WhiteTree is installed.</p>
+    <div class="callout">The dashboard runs alongside the bot. On a home PC it lives at
+    <code>localhost:8080</code>; with a tunnel or host it becomes a real public link.</div>
+
+    <h2 id="faq">FAQ</h2>
+    <h3>Do I need to configure anything?</h3>
+    <p>No. Protections are active on invite. Optionally run <code>/setup #logs</code> to see alerts.</p>
+    <h3>The bot can't sanction members</h3>
+    <p>Move the WhiteTree role higher than the roles it should manage, and keep the listed permissions.</p>
+    <h3>How do I keep it running 24/7?</h3>
+    <p>Host it on a small server (Oracle Cloud free tier, a VPS, or a device that stays on).</p>
+  </main>
+</div></div>
+
+<footer><div class="container foot-in">
+  <a class="brand" href="index.html" style="font-size:15px"><span class="logo" style="width:26px;height:26px"><img src="bot.png" onerror="this.replaceWith(document.createTextNode('W'))"></span>WhiteTree</a>
+  <a href="documentation.html" data-i18n="nav.docs">Documentation</a>
+  <a href="terms.html" data-i18n="nav.terms">Terms</a>
+  <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+  <span class="sep" data-i18n="foot.made">Not affiliated with Discord Inc.</span>
+</div></footer>
+<script src="site.js"></script>
+</body>
+</html>

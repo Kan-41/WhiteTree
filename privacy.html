@@ -4,95 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — WhiteTree</title>
-<style>
-  :root { --ink:#1a1a1a; --muted:#6b6b6b; --line:#ececec;
-    --paper:#fff; --card:#fafafa; --body:#2a2a2a; }
-  body.dark { --ink:#f3f2ee; --muted:#9b9a93; --line:#2a2a27;
-    --paper:#0d0d0c; --card:#161614; --body:#cdccc5; }
-  * { box-sizing: border-box; }
-  body { font-family: ui-serif, Georgia, "Times New Roman", serif; color: var(--ink);
-    background: var(--paper); margin: 0; line-height: 1.7; -webkit-font-smoothing: antialiased;
-    transition: background .2s, color .2s; }
-  .controls { position: fixed; top: 18px; right: 18px; z-index: 10; display: flex; gap: 8px; }
-  .controls select, .controls button {
-    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; color: var(--muted);
-    background: var(--paper); border: 1px solid var(--line); padding: 7px 12px;
-    border-radius: 999px; cursor: pointer; }
-  .controls button:hover, .controls select:hover { color: var(--ink); }
-  [dir=rtl] .controls { right: auto; left: 18px; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 28px 96px; }
-  .eyebrow { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 12px;
-    letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-  h1 { font-size: 34px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 6px; }
-  .updated { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px;
-    color: var(--muted); margin-bottom: 44px; }
-  h2 { font-size: 19px; font-weight: 600; margin: 40px 0 10px; }
-  p, li { font-size: 16.5px; color: var(--body); }
-  ul { padding-left: 22px; } li { margin: 6px 0; }
-  a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
-  .rule { height: 1px; background: var(--line); border: 0; margin: 48px 0 0; }
-  .card { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14.5px;
-    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-    padding: 18px 20px; margin: 20px 0; color: var(--body); }
-  footer { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px;
-    color: var(--muted); margin-top: 40px; }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<div class="controls">
-  <select class="langsel" aria-label="Language"></select>
-  <button id="themebtn"></button>
-</div>
-<div class="wrap">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:30px;">
-    <span style="width:40px;height:40px;border-radius:50%;overflow:hidden;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;font-family:ui-serif,Georgia,serif;font-weight:600;color:var(--muted);">
-      <img src="bot.png" alt="WhiteTree" style="width:100%;height:100%;object-fit:cover;" onerror="this.replaceWith(document.createTextNode('W'))"></span>
-    <b style="font-family:ui-serif,Georgia,serif;font-size:18px;">WhiteTree</b>
+<nav class="nav"><div class="container nav-in">
+  <a class="brand" href="index.html"><span class="logo"><img src="bot.png" onerror="this.replaceWith(document.createTextNode('W'))"></span>WhiteTree</a>
+  <div class="nav-links">
+    <a href="documentation.html" data-i18n="nav.docs">Documentation</a>
+    <a href="terms.html" data-i18n="nav.terms">Terms</a>
+    <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
   </div>
-  <div class="eyebrow" data-i18n="pv.eye"></div>
-  <h1 data-i18n="pv.h"></h1>
-  <div class="updated" data-i18n="pv.upd"></div>
+  <div class="nav-right">
+    <button class="pill langpill" onclick="toggleLang()">EN</button>
+    <button class="pill themepill" onclick="toggleTheme()">☽</button>
+    <a class="pill" data-support href="#" data-i18n="nav.support">Support</a>
+    <a class="btn" data-login href="#" data-i18n="cta.login">Open dashboard</a>
+  </div>
+</div></nav>
 
-  <p data-i18n="pv.intro"></p>
+<div class="container page"><main class="prose" style="max-width:760px;margin:0 auto">
+  <h1>Privacy Policy</h1>
+  <div class="updated">Last updated: July 2026 — WhiteTree · Controller: Kan | Kan_Inthesky</div>
 
-  <h2 data-i18n="pv.h1"></h2>
+  <p>WhiteTree is an anti-raid moderation bot for Discord. This page explains, simply, what data is
+  processed, why, and what is never kept.</p>
+
+  <h2>What the bot processes</h2>
   <ul>
-    <li data-i18n="pv.l1"></li>
-    <li data-i18n="pv.l2"></li>
-    <li data-i18n="pv.l3"></li>
-    <li data-i18n="pv.l4"></li>
+    <li>Server configuration: protection thresholds, log channel, staff roles, whitelist, language.</li>
+    <li>Technical identifiers: server, channel, role and user IDs involved in a moderation action.</li>
+    <li>Sanctions log: who was sanctioned, when, by which module and why.</li>
+    <li>Active quarantines: the roles of a quarantined member, so they can be restored later.</li>
   </ul>
 
-  <h2 data-i18n="pv.h2"></h2>
-  <div class="card" data-i18n="pv.c"></div>
+  <h2>Message content</h2>
+  <div class="callout">Message content is analyzed in memory, in real time, to detect spam, invite
+  links and abusive mentions. It is never stored on disk, never shared, and never used for any other
+  purpose. Once checked, the content is discarded.</div>
 
-  <h2 data-i18n="pv.h3"></h2>
+  <h2>What the bot never does</h2>
   <ul>
-    <li data-i18n="pv.n1"></li>
-    <li data-i18n="pv.n2"></li>
-    <li data-i18n="pv.n3"></li>
+    <li>No selling or sharing of data with third parties.</li>
+    <li>No advertising, no tracking.</li>
+    <li>No collection of direct messages or non-moderation data.</li>
   </ul>
 
-  <h2 data-i18n="pv.h4"></h2>
-  <p data-i18n="pv.ret"></p>
+  <h2>Retention and deletion</h2>
+  <p>Configuration data is kept as long as the bot is on the server. When it is removed,
+  administrators can request deletion of the server's data via the support contact below.</p>
 
-  <h2 data-i18n="pv.h5"></h2>
-  <p data-i18n="pv.sec"></p>
+  <h2>Security</h2>
+  <p>Data is stored locally by the bot's host and protected by that host's access controls. The bot
+  token and credentials are never exposed.</p>
 
-  <h2 data-i18n="pv.h6"></h2>
-  <p data-i18n="pv.ct1"></p>
-  <p data-i18n-html="pv.ct2"></p>
+  <h2>Your rights</h2>
+  <p>You can request access to, or deletion of, the data associated with a server you administer by
+  contacting the controller below.</p>
 
-  <hr class="rule">
-  <footer data-i18n="pv.foot"></footer>
-</div>
-<script src="i18n.js"></script>
-<script>
-  const tb = document.getElementById("themebtn");
-  function themeLabel(){ tb.textContent = document.body.classList.contains("dark") ? t("t.light") : t("t.dark"); }
-  tb.addEventListener("click", ()=>{ document.body.classList.toggle("dark"); themeLabel(); });
-  document.addEventListener("langchange", themeLabel);
-  themeLabel();
-</script>
+  <h2>Contact</h2>
+  <p>Data controller: <strong>Kan | Kan_Inthesky</strong> — Contact:
+  <a data-support href="https://discord.gg/kjzGA44RRE">Discord support server</a>.</p>
+</main></div>
+
+<footer><div class="container foot-in">
+  <a class="brand" href="index.html" style="font-size:15px"><span class="logo" style="width:26px;height:26px"><img src="bot.png" onerror="this.replaceWith(document.createTextNode('W'))"></span>WhiteTree</a>
+  <a href="documentation.html" data-i18n="nav.docs">Documentation</a>
+  <a href="terms.html" data-i18n="nav.terms">Terms</a>
+  <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+  <span class="sep" data-i18n="foot.made">Not affiliated with Discord Inc.</span>
+</div></footer>
+<script src="site.js"></script>
 </body>
 </html>
